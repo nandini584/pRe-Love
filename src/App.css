@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +35,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.rev_in{
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0; */
+  color:#f8ce0b;
+}
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #f8ce0b;
+}
+
+.bg1{
+  background-image: url("./Components/Images/bg1.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 5px;
+}
+.bg2{
+  background-image: url("./Components/Images/bg2.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 5px;
 }

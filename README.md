@@ -1,3 +1,5 @@
+The main readme starts from line no-75
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +70,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# To get started first make another branch aside the main branch.
+Run npm install to install all the necessary modules in your local server.
+
+The web components are all in the "src" folder. 
+All the parts load into the index.html file in public folder. It has Javascript injected to it by Index.js. We are using app.js to inject all the components like navbar and login pages to index.js.
+ 
+We are using Tailwindcss in our project for most of the css.
+Tailwind.config.js file contains all the tailwindcss addons inlcuding some  fonts colours etc. those are the theme fonts and colours we are using.
+If you ever need to add something for css which is not  available in tailwind then just make a file global.css and use it for this work. 
+All the css is to be imported in App.js.
+
+**Map:**
+1. Src folder is what you are going to work with. 
+2. The componets folder contains all the props of the website.
+3. Login and signup contains all the designing of login and signup section.
+4. Navbar contains all the navbar detalis and its UI code majorly.
+5. Tiles is the prop of each product and is to be displayed at a limit of 50 per page.
+
+When you are done with the work please check it once more and then commit it into the main of your fork and make a PR of the work. All PRs are reviewed at 10 pm IST.
