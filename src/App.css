@@ -63,3 +63,6 @@
   background-repeat: no-repeat;
   margin: 5px;
 }
+.searchResult::-webkit-scrollbar{
+  display: none;
+}

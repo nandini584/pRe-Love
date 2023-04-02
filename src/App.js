@@ -4,7 +4,6 @@ import Navbar from './Components/Navbar';
 import Login from './Components/login'
 import Signup from './Components/Signup';
 import HomePage from './Components/Homepage';
-import {Tiles} from './Components/Tiles';
 import MainContent from './Components/Shop/MainContent/MainContent';
 function App() {
   // let ele=["../ProductImages/Product1.jpg","Blue crop top","Blue crop top by Divore",1500,50,4.5];

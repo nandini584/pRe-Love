@@ -1,4 +1,4 @@
-const Tiles=({Photo,Name,Description,Pricing,Discount,Review})=>{
+const Tiles=({Photo,Name,Description,Pricing,Discount,Review,ReviewCount})=>{
     let cost=Pricing*(100-Discount)/100;
     return(
         <>
