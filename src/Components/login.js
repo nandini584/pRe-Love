@@ -3,39 +3,36 @@ import { Link } from "react-router-dom";
 const Login=()=>{
     return(
         <>
-        <div className="page flex justify-center items-center h-screen font-Ubunt">
+            <div class="page flex justify-center items-center h-screen"
+        style={{background:" url('./bg.jpeg') no-repeat center center/cover;"}}>
 
         <div id="formdiv"
-            className="drop-shadow-2xl flex flex-col justify-center items-center w-[23rem] md:w-[28rem] lg:w-[32rem]  rounded-[35px] bg-gray-100 ">
+            class="drop-shadow-2xl flex flex-col justify-center items-center w-[22rem] h-[35rem] sm:w-[25rem] md:w-[28rem] lg:w-[32rem]  rounded-[35px] bg-gray-100">
 
             <img src={require("./logo.jpg" )} alt="pRe-Love"
-                className="w-24 h-24 rounded-[40%] sm:w-26 sm:h-26 lg:w-35 lg:h-35 p-1 mt-2 -mb-1"/>
-            <h1 className="my-2   text-[2rem] lg:text-[2.5rem]">Login</h1>
+                class="w-24 h-24 rounded-[40%] sm:w-26 sm:h-26 lg:w-35 lg:h-35 p-1 mt-2 -mb-1"/>
+            <h1 class="my-2   text-[2rem] lg:text-[2.5rem]">Login</h1>
 
-            <form action="/backend.js" name="form" id="form"
-                className="form  flex flex-col relative bottom-5 w-[280px] md:w-[300px] lg:w-[350px]" method="post" 
-                // onSubmit={`return ${validateForm()}`}>
-                >
+            <form action="/backend.js" name="form" id="form" onsubmit="return validateForm()"
+                class="mr-20 lg:mr-32 flex flex-col relative bottom-5">
 
                 <input type="text" name="username" id="username" placeholder="Username"
-                    className="text-xs sm:text-sm md:text-md px-2 py-1 ml-0 border-b-2 border-b-gray-400 w-full m-4 h-8 mt-6 hover:border-b-2 hover:border-b-blue-700 focus:outline-none focus:border-blue-700 focus:bg-blue-100 transition-colors duration-500 hover:rounded-md focus:rounded-md bg-gray-100  "
+                    class="text-xs sm:text-sm md:text-md px-2 py-1 ml-2 border-b-2  border-b-gray-400 m-4 h-8 w-[130%] lg:w-[150%] hover:border-b-2 hover:border-b-blue-700 focus:outline-none focus:border-blue-700 focus:bg-blue-100 transition-colors duration-500 hover:rounded-md focus:rounded-md bg-gray-100  "
                     required/>
 
-                <div className="pwd flex items-center border-b-2 border-b-gray-400 focus:bg-blue-100 transition-colors duration-500 hover:rounded-md hover:border-b-blue-700">
                 <input type="password" name="password" id="password" placeholder="Enter Password"
-                    className="text-xs sm:text-sm md:text-md px-2 py-1 ml-0 mb-0 pb-0 border-b-2 m-4 h-8 w-[100%] focus:outline-none bg-gray-100 "
+                    class="text-xs sm:text-sm md:text-md px-2 py-1 ml-2 border-b-2 border-b-gray-400 w-[130%] lg:w-[150%] m-4 h-8 hover:border-b-2 hover:border-b-blue-700 focus:outline-none focus:border-blue-700 focus:bg-blue-100 transition-colors duration-500 hover:rounded-md focus:rounded-md bg-gray-100  "
                     required/>
-                <i className="fas fa-eye-slash text-lg relative top-2 right-2 z-10" id="eye"></i></div>
 
-                <Link to="/forgot" className="text-blue-600 text-xs relative left-3 inline mt-2">Forgot Password?</Link>
+                <a href="/forgot" class="text-blue-500   text-xs relative left-3 inline">Forgot Password?</a>
 
                 <button type="submit"
-                className="m-5 mb-7 w-[150px] px-4 pt-1 pb-2 outline-none shadow-md shadow-gray-500 cursor-pointer relative left-14 lg:left-20 rounded-xl hover:scale-110 transition-transform duration-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">Login</button>
+                    class="m-5 mb-7 w-1/2 px-4 pt-1 pb-2 outline-none shadow-md shadow-gray-500 cursor-pointer relative left-14 lg:left-20 rounded-xl hover:scale-110 transition-transform duration-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">Login</button>
             </form>
 
-            <hr className="border-2 border-gray-200 w-[80%] relative bottom-8"/>
-            <p className="text-xs relative bottom-6">Don't have an account? <Link to="/Signup"
-                    className="text-blue-500  ">Sign Up</Link> </p>
+            <hr class="border-2 border-gray-200 w-[80%] relative bottom-8"/>
+            <p class="text-xs relative bottom-6">Don't have an account? <Link to='/Signup'
+                    class="text-blue-500">Sign Up</Link> </p>
         </div>
     </div>
         </>
