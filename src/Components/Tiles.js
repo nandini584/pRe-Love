@@ -11,12 +11,12 @@ const Tiles=({Photo,Name,Description,Pricing,Discount,Review,ReviewCount})=>{
                     {Description}
                 </div>
                 <div>
-                    <p>
+                    <div>
                     <del className="font-light">&#8377;{Pricing}</del> 	&#8377;{cost}
                     <p className="text-orange-700">
                         {Discount}% off
                     </p>
-                    </p>
+                    </div>
                 </div>
                 <div className="Review">
                     <span className="rev_in fas fa-star"></span>
