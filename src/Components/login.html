@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login pRe-Love </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5a360170f9.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="m-0 p-0" style="font-family: 'Ubuntu', sans-serif;">
+
+    <div class="page flex justify-center items-center h-screen "
+        style="background: url('./bg.jpeg') no-repeat center center/cover;">
+
+        <div id="formdiv"
+            class="drop-shadow-2xl flex flex-col justify-center items-center w-[23rem] md:w-[28rem] lg:w-[32rem]  rounded-[35px] bg-gray-100 ">
+
+            <img src="./logo.jpg" alt="pRe-Love"
+                class="w-24 h-24 rounded-[40%] sm:w-26 sm:h-26 lg:w-35 lg:h-35 p-1 mt-2 -mb-1">
+            <h1 class="my-2   text-[2rem] lg:text-[2.5rem]">Login</h1>
+
+            <form action="/backend.js" name="form" id="form"
+                class="form  flex flex-col relative bottom-5 w-[280px] md:w-[300px] lg:w-[350px]" method="post" onsubmit="return validateForm()">
+
+                <input type="text" name="username" id="username" placeholder="Username"
+                    class="text-xs sm:text-sm md:text-md px-2 py-1 ml-0 border-b-2 border-b-gray-400 w-full m-4 h-8 mt-6 hover:border-b-2 hover:border-b-blue-700 focus:outline-none focus:border-blue-700 focus:bg-blue-100 transition-colors duration-500 hover:rounded-md focus:rounded-md bg-gray-100  "
+                    required>
+                <div class="formError ml-3 text-[0.65rem] -mt-4 text-red-500 h-2"></div>
+
+                <div
+                    class="pwd flex items-center border-b-2 border-b-gray-400 focus:bg-blue-100 transition-colors duration-500 hover:rounded-md hover:border-b-blue-700">
+                    <input type="password" name="password" id="password" placeholder="Enter Password"
+                        class="text-xs sm:text-sm md:text-md px-2 py-1 ml-0 mb-0 pb-0 border-b-2 m-4 h-8 w-[100%] focus:outline-none bg-gray-100 "
+                        required>
+                    <i class="fas fa-eye-slash text-lg relative top-2 right-2 z-10" id="eye"></i>
+                </div>
+
+                <a href="/forgot" class="text-blue-600 text-xs relative left-3 inline mt-2">Forgot Password?</a>
+
+                <button type="submit"
+                    class="m-5 mb-7 w-[150px] px-4 pt-1 pb-2 outline-none shadow-md shadow-gray-500 cursor-pointer relative left-14 lg:left-20 rounded-xl hover:scale-110 transition-transform duration-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">Login</button>
+            </form>
+
+            <hr class="border-2 border-gray-200 w-[80%] relative bottom-8">
+            <p class="text-xs relative bottom-6">Don't have an account? <a href="./signup.html"
+                    class="text-blue-500  ">Sign Up</a> </p>
+        </div>
+    </div>
+
+    <script>
+        let eye = document.getElementById("eye");
+        let pwd = document.getElementById("password");
+        function clearErrors() {
+            let error = document.getElementsByClassName("formError");
+            for (let errors of error) {
+                errors.innerHTML = "";
+            }
+            errors = 0;
+        }
+        function seterror(i, err) {
+            document.getElementsByClassName('formError')[i].innerHTML = err;
+        }
+        eye.addEventListener("click", () => {
+            if (pwd.type == "password") {
+                pwd.type = "text";
+                eye.classList.remove("fas", "fa-eye-slash");
+                eye.classList.add("fas", "fa-eye");
+            }
+            else {
+                pwd.type = "password";
+                eye.classList.remove("fas", "fa-eye");
+                eye.classList.add("fas", "fa-eye-slash");
+            }
+
+        })
+        function validateForm() {
+            let returnval = true;
+            clearErrors();
+            let username = document.forms["form"]["username"].value;
+            let unamepatt = /[^\w]/g;
+            if (username.match(unamepatt) != null) {
+                seterror(0, "Username can only contain numbers, alphabet and underscore(_)");
+                returnval = false;
+            }
+            return returnval;
+        }
+
+    </script>
+
+</body>
+
+</html>
