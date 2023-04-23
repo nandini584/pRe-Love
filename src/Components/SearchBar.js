@@ -11,7 +11,7 @@ const SearchBar = ({data}) => {
         const newFilter=data.filter((value)=>{
             return value.Description.toLowerCase().includes(searchWord.toLowerCase())
         });
-        if(searchWord===""){
+        if(searchWord ===""){
             SetFilteredData([]);
         }
         else
@@ -22,13 +22,13 @@ const SearchBar = ({data}) => {
         setWordEntered("");
     }
     return ( 
-        <div className="Search mt-[20px]">
-            <div className="border-[grey] border-2 pr-4 rounded-[35px]">
-                <input type="text" placeholder="Search" value={wordEntered} className="focus:outline-none h-[25px] w-[300px] pl-4 rounded-[35px]" onChange={handleFilter}/>
-                {FilteredData.length===0?<SearchIcon/>:<><ClearIcon className='cursor-pointer' onClick={ClearInput}/> <SearchIcon/></>}
+        <>
+            <div className="rounded-[10px] h-[54px] w-[765px] bg-[#E0E2E1] flex items-center pl-[6px]">
+                <SearchIcon/>
+                <input type="text" placeholder="Search" value={wordEntered} className="focus:outline-none pl-4 rounded-[10px] bg-[#E0E2E1] h-[54px] w-[735px] " onChange={handleFilter}/>
             </div>
-            {FilteredData.length!=0 && (
-            <div className="searchResult m-3 mt-1 w-[300px] h-[400px] overflow-y-auto bg-white p-2 leading-10">
+            {/* {FilteredData.length!==0 && (
+            <div className="searchResult m-3 mt-1 w-[300px] h-[400px] overflow-y-auto p-2 leading-10">
             {FilteredData.slice(0,15).map((value,key)=>{
                 return(
                 <Link to="/" >
@@ -37,8 +37,8 @@ const SearchBar = ({data}) => {
                 )
             })}
             </div>
-            )}
-        </div>
+            )} */}
+        </>
      );
 }
  

@@ -52,17 +52,23 @@
 }
 
 .bg1{
-  background-image: url("./Components/Images/bg1.jpeg");
+  background-image: url("./Components/Images/Pre-loved-Fashion.png");
   background-repeat: no-repeat;
-  background-size: 100%;
-  margin: 5px;
+  background-size: 100% 100%;
+  margin-right: 5px;
 }
 .bg2{
-  background-image: url("./Components/Images/bg2.jpeg");
-  background-size: 100%;
+  background-image: url("./Components/Images/Eco-fashion.png");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  margin: 5px;
+  margin-left: 5px;
 }
 .searchResult::-webkit-scrollbar{
   display: none;
+}
+.FAQs{
+  background-image:url("./Components/Images/Question mark.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 100%;
 }
