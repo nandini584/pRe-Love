@@ -4,24 +4,30 @@ import itemdata from './Items.json'
 const Navbar=()=>{
     return(
         <>
-        <nav className='flex sticky bg-white top-0 right-0 bottom-0 z-[1010] h-[70px] w-[100%] justify-between drop-shadow-lg shadow-lg '>
-            <div className='w-[150px] flex justify-around'>
+        <nav className='flex sticky bg-[#F1F3F2] top-0 z-[1010] h-[138px] w-[100%] items-center justify-between font-Montserrat font-bold'>
+            <div className='w-[150px]'>
             <Link to="/">
-                <img src={require("./logo.jpg")} alt="/" className='w-[100px] h-[100px] rounded-[40px] drop-shadow-lg shadow-lg' />
+                <img src={require("./logo.png")} alt="logo" className='w-[133px] h-[114px]' />
             </Link>
             </div>
-            <ul className='flex content-center items-center text-[22px] font-normal font-Alkatra'>
-                <li className='list-none m-2 p-2 w-[100px] hover:border-b-2 hover:border-[#754d10] ease-in-out duration-[0.1s]'><Link to="/">Home</Link></li>
-                <li className='list-none m-2 p-2 w-[100px] hover:border-b-2 hover:border-[#754d10] ease-in-out duration-[0.1s]'><Link to="/Shop">Shop</Link></li>
-                <li className='list-none m-2 p-2 w-[150px] hover:border-b-2 hover:border-[#754d10] ease-in-out duration-[0.1s]'><Link to="/">NewsLetter</Link></li>
-                <li className='list-none m-2 p-2 w-[100px] hover:border-b-2 hover:border-[#754d10] ease-in-out duration-[0.1s]'><Link to="/">Contact</Link></li>
-                <li className='list-none m-2 p-2 w-[150px] hover:border-b-2 hover:border-[#754d10] ease-in-out duration-[0.1s]'><Link to="/Login">Login/Signup</Link></li>
-            </ul>
-            <div>
-                <SearchBar data={itemdata}/>
-            </div>
-            <div className="flex content-center align-middle flex-wrap mr-4">
-            <svg style={{width:"40px", height:"40px",}} viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" strokeWidth="3" stroke="#79787d" fill="none"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M9.06,25C7.68,17.3,12.78,10.63,20.73,10c7-.55,10.47,7.93,11.17,9.55a.13.13,0,0,0,.25,0c3.25-8.91,9.17-9.29,11.25-9.5C49,9.45,56.51,13.78,55,23.87c-2.16,14-23.12,29.81-23.12,29.81S11.79,40.05,9.06,25Z"></path></g></svg>
+            {/* <ul className='flex content-center items-center text-[30px] font-normal font-Alkatra'>
+                <li className='list-none m-2 p-2 w-fit hover:border-b-2 hover:border-[#754d10] ease-in-out duration-[0.1s]'><Link to="/">H</Link></li>
+                <li className='list-none m-2 p-2 w-fit hover:border-b-2 hover:border-[#754d10] ease-in-out duration-[0.1s]'><Link to="/Shop">S</Link></li>
+                <li className='list-none m-2 p-2 w-fit hover:border-b-2 hover:border-[#754d10] ease-in-out duration-[0.1s]'><Link to="/">N</Link></li>
+                <li className='list-none m-2 p-2 w-fit hover:border-b-2 hover:border-[#754d10] ease-in-out duration-[0.1s]'><Link to="/">C</Link></li>
+                <li className='list-none m-2 p-2 w-fit hover:border-b-2 hover:border-[#754d10] ease-in-out duration-[0.1s]'><Link to="/Login">L</Link></li>
+            </ul> */}
+            <SearchBar data={itemdata}/>
+            <div className="grid grid-flow-col flex-wrap items-center justify-center" style={{
+                gridTemplateColumns:"100px 100px 100px",
+                gridTemplateRows:"40px 20px"
+            }}>
+                <img src={require("./Images/person.png")} alt="profile"/>
+                <span><strong>Profile</strong></span>
+                <img src={require("./Images/wishlist.png")} alt="wishlist"/>
+                <strong>Wishlist</strong>
+                <img src={require("./Images/bag.png")} alt="bag"/>
+                <strong>Bag</strong>
             </div>
         </nav>
         </>

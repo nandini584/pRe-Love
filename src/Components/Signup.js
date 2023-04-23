@@ -8,7 +8,7 @@ const Signup = () => {
           className="drop-shadow-2xl flex flex-col justify-center items-center w-[23rem] md:w-[28rem] lg:w-[32rem]  rounded-[35px] bg-gray-100 "
         >
           <img
-            src={require("./logo.jpg")}
+            src={require("./logo.png")}
             alt="pRe-Love"
             className="w-24 h-24 rounded-[40%] sm:w-26 sm:h-26 lg:w-35 lg:h-35 p-1 mt-2 -mb-1 "
           />

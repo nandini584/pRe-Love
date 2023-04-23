@@ -10,7 +10,8 @@ module.exports = {
         'Ubuntu':['Ubuntu','sans-serif'],
         'Fasthand':['Fasthand', 'cursive'],
         'Lobster':['Lobster', 'cursive'],
-        'Pacifino':['Pacifico', 'cursive']
+        'Pacifino':['Pacifico', 'cursive'],
+        'Montserrat':['Montserrat', 'sans-serif'],
       }
     },
   },
