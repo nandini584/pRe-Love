@@ -183,7 +183,7 @@
             let pwdcap = /[A-Z]/g;
             let pwdsmall = /[a-z]/g;
             let pwdnum = /[0-9]/g;
-            if (pwd.length < 8) {
+            if (pwdvalue.length < 8) {
                 seterror(4, "*Password should contain atleast 8 digits!");
                 returnval = false;
                 errors++;
