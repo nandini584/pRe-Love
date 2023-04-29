@@ -1,0 +1,607 @@
+[
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img1.jpg",
+        "Price":2999,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img2.jpg",
+        "Price":3299,
+        "Discount":60
+    },
+    {
+        "Name":"Sangria",
+        "Description":"Women Kurta with salwar",
+        "url":"shopImages/img3.jpg",
+        "Price":2199,
+        "Discount":56
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Embroided kurta with plazo",
+        "url":"shopImages/img4.jpg",
+        "Price":2499,
+        "Discount":60
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Kurta set with Dupatta",
+        "url":"shopImages/img5.jpg",
+        "Price":3799,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Chikankari Kurta with Plazos",
+        "url":"shopImages/img6.jpg",
+        "Price":2499,
+        "Discount":60
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Yoke design kurta set",
+        "url":"shopImages/img7.jpg",
+        "Price":2899,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img8.jpg",
+        "Price":1699,
+        "Discount":60
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women kurta trousers & duppata",
+        "url":"shopImages/img9.jpg",
+        "Price":5399,
+        "Discount":60
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Indigo kurti with dhoti Pants",
+        "url":"shopImages/img10.jpg",
+        "Price":3299,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img11.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img12.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img13.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img14.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img15.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img16.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img17.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img18.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img19.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img20.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img1.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img2.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img3.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img4.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img5.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img6.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img7.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img8.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img9.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img10.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img11.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+    {
+        "Name":"Anounk",
+        "Description":"Women Printed kurta with troupes",
+        "url":"shopImages/img12.jpg",
+        "Price":1500,
+        "Discount":65
+    },
+
+    {
+        "Name":"Jompers",
+        "Description":"Men Floral Embroidered Kurta",
+        "url":"shopImages/img13.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"House of Patodi",
+        "Description":"Men Solid Rozana Kurta",
+        "url":"shopImages/img14.jpg",
+        "Price":974,
+        "Discount":35
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Floral Embroidered Kurta",
+        "url":"shopImages/img15.jpg",
+        "Price":971,
+        "Discount":64
+    },
+    {
+        "Name":"Fabindia",
+        "Description":"Striped Thread Work Kurta",
+        "url":"shopImages/img16.jpg",
+        "Price":4499,
+        "Discount":15
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Men Floral Embroidered Kurta",
+        "url":"shopImages/img17.jpg",
+        "Price":559,
+        "Discount":65
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Men Striped Kurta",
+        "url":"shopImages/img18.jpg",
+        "Price":489,
+        "Discount":65
+    },
+    {
+        "Name":"Fabindia",
+        "Description":"Mandarin Collar Cotton Kurta",
+        "url":"shopImages/img19.jpg",
+        "Price":1599,
+        "Discount":30
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Chikankari Straight Kurta",
+        "url":"shopImages/img20.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Ethnic Motifs Cotton Kurta",
+        "url":"shopImages/img1.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Men Printed Kurta",
+        "url":"shopImages/img2.jpg",
+        "Price":719,
+        "Discount":60
+    },
+    {
+        "Name":"House of Patodi",
+        "Description":"Men Chikankar Rozana Kurta",
+        "url":"shopImages/img3.jpg",
+        "Price":2079,
+        "Discount":35
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Embellished Kurta",
+        "url":"shopImages/img4.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Striped Straight Kurta",
+        "url":"shopImages/img5.jpg",
+        "Price":479,
+        "Discount":70
+    },
+    {
+        "Name":"SOJANYA",
+        "Description":"Men Ethnic Motifs Cotton Kurta",
+        "url":"shopImages/img6.jpg",
+        "Price":998,
+        "Discount":70
+    },
+    {
+        "Name":"SOJANYA",
+        "Description":"Men Ethnic Motifs Cotton Kurta",
+        "url":"shopImages/img7.jpg",
+        "Price":998,
+        "Discount":70
+    },
+    {
+        "Name":"House of Patodi",
+        "Description":"Men Chikankari Rozana Kurta",
+        "url":"shopImages/img8.jpg",
+        "Price":1949,
+        "Discount":35
+    },
+    {
+        "Name":"DEYANN",
+        "Description":"Solid Straight Kurta",
+        "url":"shopImages/img9.jpg",
+        "Price":297,
+        "Discount":70
+    },
+    {
+        "Name":"KISAH",
+        "Description":"Woven Design Straight Kurta",
+        "url":"shopImages/img10.jpg",
+        "Price":1557,
+        "Discount":62
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Floral Embroidered Kurta",
+        "url":"shopImages/img11.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"House of Patodi",
+        "Description":"Men Solid Rozana Kurta",
+        "url":"shopImages/img12.jpg",
+        "Price":974,
+        "Discount":35
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Floral Embroidered Kurta",
+        "url":"shopImages/img13.jpg",
+        "Price":971,
+        "Discount":64
+    },
+    {
+        "Name":"Fabindia",
+        "Description":"Striped Thread Work Kurta",
+        "url":"shopImages/img14.jpg",
+        "Price":4499,
+        "Discount":15
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Men Floral Embroidered Kurta",
+        "url":"shopImages/img15.jpg",
+        "Price":559,
+        "Discount":65
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Men Striped Kurta",
+        "url":"shopImages/img16.jpg",
+        "Price":489,
+        "Discount":65
+    },
+    {
+        "Name":"Fabindia",
+        "Description":"Mandarin Collar Cotton Kurta",
+        "url":"shopImages/img17.jpg",
+        "Price":1599,
+        "Discount":30
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Chikankari Straight Kurta",
+        "url":"shopImages/img18.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Ethnic Motifs Cotton Kurta",
+        "url":"shopImages/img19.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Men Printed Kurta",
+        "url":"shopImages/img20.jpg",
+        "Price":719,
+        "Discount":60
+    },
+    {
+        "Name":"House of Patodi",
+        "Description":"Men Chikankar Rozana Kurta",
+        "url":"shopImages/img1.jpg",
+        "Price":2079,
+        "Discount":35
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Embellished Kurta",
+        "url":"shopImages/img2.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Striped Straight Kurta",
+        "url":"shopImages/img3.jpg",
+        "Price":479,
+        "Discount":70
+    },
+    {
+        "Name":"SOJANYA",
+        "Description":"Men Ethnic Motifs Cotton Kurta",
+        "url":"shopImages/img4.jpg",
+        "Price":998,
+        "Discount":70
+    },
+    {
+        "Name":"SOJANYA",
+        "Description":"Men Ethnic Motifs Cotton Kurta",
+        "url":"shopImages/img5.jpg",
+        "Price":998,
+        "Discount":70
+    },
+    {
+        "Name":"House of Patodi",
+        "Description":"Men Chikankari Rozana Kurta",
+        "url":"shopImages/img6.jpg",
+        "Price":1949,
+        "Discount":35
+    },
+    {
+        "Name":"DEYANN",
+        "Description":"Solid Straight Kurta",
+        "url":"shopImages/img7.jpg",
+        "Price":297,
+        "Discount":70
+    },
+    {
+        "Name":"KISAH",
+        "Description":"Woven Design Straight Kurta",
+        "url":"shopImages/img8.jpg",
+        "Price":1557,
+        "Discount":62
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Floral Embroidered Kurta",
+        "url":"shopImages/img9.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"House of Patodi",
+        "Description":"Men Solid Rozana Kurta",
+        "url":"shopImages/img10.jpg",
+        "Price":974,
+        "Discount":35
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Floral Embroidered Kurta",
+        "url":"shopImages/img11.jpg",
+        "Price":971,
+        "Discount":64
+    },
+    {
+        "Name":"Fabindia",
+        "Description":"Striped Thread Work Kurta",
+        "url":"shopImages/img12.jpg",
+        "Price":4499,
+        "Discount":15
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Men Floral Embroidered Kurta",
+        "url":"shopImages/img13.jpg",
+        "Price":559,
+        "Discount":65
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Men Striped Kurta",
+        "url":"shopImages/img14.jpg",
+        "Price":489,
+        "Discount":65
+    },
+    {
+        "Name":"Fabindia",
+        "Description":"Mandarin Collar Cotton Kurta",
+        "url":"shopImages/img15.jpg",
+        "Price":1599,
+        "Discount":30
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Chikankari Straight Kurta",
+        "url":"shopImages/img16.jpg",
+        "Price":1719,
+        "Discount":60,
+        "Review":4.1,
+        "ReviewCount":34
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Ethnic Motifs Cotton Kurta",
+        "url":"shopImages/img17.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Men Printed Kurta",
+        "url":"shopImages/img18.jpg",
+        "Price":719,
+        "Discount":60
+    },
+    {
+        "Name":"House of Patodi",
+        "Description":"Men Chikankar Rozana Kurta",
+        "url":"shopImages/img19.jpg",
+        "Price":2079,
+        "Discount":35
+    },
+    {
+        "Name":"Jompers",
+        "Description":"Men Embellished Kurta",
+        "url":"shopImages/img20.jpg",
+        "Price":1719,
+        "Discount":60
+    },
+    {
+        "Name":"Anouk",
+        "Description":"Striped Straight Kurta",
+        "url":"shopImages/img1.jpg",
+        "Price":479,
+        "Discount":70
+    },
+    {
+        "Name":"SOJANYA",
+        "Description":"Men Ethnic Motifs Cotton Kurta",
+        "url":"shopImages/img2.jpg",
+        "Price":998,
+        "Discount":70
+    },
+    {
+        "Name":"SOJANYA",
+        "Description":"Men Ethnic Motifs Cotton Kurta",
+        "url":"shopImages/img3.jpg",
+        "Price":998,
+        "Discount":70
+    },
+    {
+        "Name":"House of Patodi",
+        "Description":"Men Chikankari Rozana Kurta",
+        "url":"shopImages/img4.jpg",
+        "Price":1949,
+        "Discount":35
+    },
+    {
+        "Name":"DEYANN",
+        "Description":"Solid Straight Kurta",
+        "url":"shopImages/img5.jpg",
+        "Price":297,
+        "Discount":70
+    },
+    {
+        "Name":"KISAH",
+        "Description":"Woven Design Straight Kurta",
+        "url":"shopImages/img6.jpg",
+        "Price":1557,
+        "Discount":62
+    }
+]
