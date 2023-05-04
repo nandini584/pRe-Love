@@ -1,12 +1,17 @@
-import React from 'react'
-import {Link} from "react-router-dom"
+import React, { useEffect } from 'react'
+import {Link, useNavigate} from "react-router-dom"
 import avatar from '../Images/person.png'
-import {Toaster} from 'react-hot-toast';
+import toast, {Toaster} from 'react-hot-toast';
 import {useFormik} from 'formik';
 import {ValidateLogin} from './Validate';
- 
+import { useAuthStore } from '../Store/store'; 
 import styles from '../styles/login.module.css'
+import { verifyPassword } from './helper';
+
 const Login = () => {
+
+    // const setUsername = useAuthStore(state => state.setUsername)
+    const navigate = useNavigate();
     const formikLogin=useFormik({
         initialValues : {
             username : '',
@@ -16,7 +21,18 @@ const Login = () => {
         validateOnBlur: false,
         validateOnChange: false,
         onSubmit: async values => {
-            console.log(values)
+            // setUsername( values.username );
+            const loginPromise = verifyPassword({username : values.username, password :values.password})
+            toast.promise(loginPromise,{
+                loading: 'verifying password...',
+                success : <b>Logged in Successfully...!</b>,
+                error : <b>Incorrect password.</b>
+            })
+            loginPromise.then(res =>{
+                const { token } = res.data
+                localStorage.setItem('token', token);
+                navigate('/profileview')
+            })
         }
     })
   return (
@@ -45,8 +61,9 @@ const Login = () => {
                         <button type="submit" className={styles.btn}>Let's Go</button>
                     </div>
 
-                    <div className='text-center py-4'>
+                    <div className='text-center py-4 flex flex-col'>
                         <span className='text-gray-500'>Not a member? <Link to="/register" className="text-red-500">Register Now</Link></span>
+                        <span className='text-gray-500'>Forgot password? <Link to="/recover" className="text-red-500">Recover Now</Link></span>
                     </div>
                 </form>
             </div>

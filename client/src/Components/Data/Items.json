@@ -2,63 +2,63 @@
     {
         "Name":"Anounk",
         "Description":"Women Printed kurta with troupes",
-        "url":"shopImages/img1.jpg",
+        "url":["shopImages/img1.jpg","shopImages/img6.jpg","shopImages/img2.jpg","shopImages/img4.jpg","shopImages/img5.jpg"],
         "Price":2999,
         "Discount":65
     },
     {
         "Name":"Anounk",
         "Description":"Women Printed kurta with troupes",
-        "url":"shopImages/img2.jpg",
+        "url":["shopImages/img2.jpg"],
         "Price":3299,
         "Discount":60
     },
     {
         "Name":"Sangria",
         "Description":"Women Kurta with salwar",
-        "url":"shopImages/img3.jpg",
+        "url":["shopImages/img3.jpg"],
         "Price":2199,
         "Discount":56
     },
     {
         "Name":"Anounk",
         "Description":"Embroided kurta with plazo",
-        "url":"shopImages/img4.jpg",
+        "url":["shopImages/img4.jpg"],
         "Price":2499,
         "Discount":60
     },
     {
         "Name":"Anounk",
         "Description":"Kurta set with Dupatta",
-        "url":"shopImages/img5.jpg",
+        "url":["shopImages/img5.jpg"],
         "Price":3799,
         "Discount":65
     },
     {
         "Name":"Anounk",
         "Description":"Chikankari Kurta with Plazos",
-        "url":"shopImages/img6.jpg",
+        "url":["shopImages/img6.jpg"],
         "Price":2499,
         "Discount":60
     },
     {
         "Name":"Anounk",
         "Description":"Women Yoke design kurta set",
-        "url":"shopImages/img7.jpg",
+        "url":["shopImages/img7.jpg"],
         "Price":2899,
         "Discount":65
     },
     {
         "Name":"Anounk",
         "Description":"Women Printed kurta with troupes",
-        "url":"shopImages/img8.jpg",
+        "url":["shopImages/img8.jpg"],
         "Price":1699,
         "Discount":60
     },
     {
         "Name":"Anounk",
         "Description":"Women kurta trousers & duppata",
-        "url":"shopImages/img9.jpg",
+        "url":["shopImages/img9.jpg"],
         "Price":5399,
         "Discount":60
     },

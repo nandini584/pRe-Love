@@ -2,13 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import connect from './database/connection.js';// in backend you need to add .js extension or you will get errors
-// import router from './router/route.js';
+import router from './router/route.js';
 
-
-// import express from 'express'
-// import cors from 'cors'
-// import morgan from 'morgan'
-// import connect from './database/connection.js' 
 
 
 const app = express();
@@ -28,6 +23,9 @@ app.get( '/', (req, res) => {
 });
 
 
+/**api request */
+app.use('/api',router);
+
 /**start Server */
 
 connect().then(() => {
@@ -39,6 +37,6 @@ connect().then(() => {
     console.log("Invalid database connection...!");
 })
 
-// app.listen(port, () => {
-//     console.log(`Server connected to http://localhost:${port}`);
-// })
+app.listen(port, () => {
+    console.log(`Server connected to http://localhost:${port}`);
+})
