@@ -11,26 +11,32 @@ import styles from '../styles/login.module.css'
 const Recover = () => {
     const navigate = useNavigate();
     const { username } = useAuthStore(state => state.auth);
-    var [OTP, setOTP] = useState();
-
+    // console.log(username)
+    var [OTP, setOTP] = useState(); 
 
     useEffect(()=>{
-        generateOTP(username).then((OTP)=>{
+        generateOTP( username ).then((OTP)=>{
+            // console.log(OTP);
+
             if(OTP) return toast.success(" An OTP has been sent to your email");
             return toast.error("Failed to generate OTP! Please try again after sometime")
         })
     },[username])
 
-    async function onSubmit(e){
+    async function onSubmit( e ) { 
         e.preventDefault();
-
-        let { status } = await verifyOTP({username ,code: OTP});
-        if(status === 201 ){
-            toast.success("OTP verified successfully");
-            return navigate('/reset');
+        try {
+            let { status } = await verifyOTP({username ,code: OTP});
+            if(status === 201 ){
+                toast.success("OTP verified successfully");
+                return navigate('/reset');
+            }
+        } catch (error) {
+            return toast.error(" Incorrect OTP !! please check your email again")
         }
+       
 
-        return toast.error(" Incorrect OTP !! please check your email again")
+        
     }
 
     function resendOTP() {
@@ -39,6 +45,10 @@ const Recover = () => {
             loading: "sending OTP",
             success: <b>OTP sent successfully</b>,
             error: <b>Failed to generate OTP! Please try again after sometime</b>
+        })
+
+        resendPromise.then((OTP)=>{
+            // console.log(OTP);
         })
     }
 
@@ -57,7 +67,7 @@ const Recover = () => {
                     </span> 
                 </div>
 
-                <form className="py-1">
+                <form className="py-1" onSubmit={onSubmit}>
                     <div className='profile flex justify-center py-4'>
                         <img src={avatar} alt="avatar" className={styles.profile_img} />
                     </div>
@@ -66,10 +76,10 @@ const Recover = () => {
                         <input type="number" onChange={(e) =>setOTP(e.target.value)}  placeholder="OTP" className={styles.textbox}/>
                         <button type="submit" className={styles.btn}>Submit</button>
                     </div>
-                    <div className='text-center py-4'>
-                        <span className='text-gray-500'>Didn't recieve OTP? <Link to="/register" className="text-red-500">Resend OTP</Link></span>
-                    </div>
                 </form>
+                    <div className='text-center py-4'>
+                        <span className='text-gray-500'>Didn't recieve OTP? <p className="text-red-500" onClick={resendOTP}>Resend OTP</p></span>
+                    </div>
             </div>
         </div>
 

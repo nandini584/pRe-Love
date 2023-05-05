@@ -22,7 +22,7 @@ const Tiles=({Photo,Name,Description,Pricing,Discount,Review,ReviewCount})=>{
     }
     return(
         <>
-        <div className="flex flex-col border-2 h-fit w-fit p-2">
+        <div className="flex flex-col h-fit w-fit px-4 py-4">
 
             <Splide options={options}>
                 <SplideSlide>

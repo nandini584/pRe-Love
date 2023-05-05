@@ -9,8 +9,6 @@ import styles from '../styles/login.module.css'
 import { verifyPassword } from './helper';
 
 const Login = () => {
-
-    // const setUsername = useAuthStore(state => state.setUsername)
     const navigate = useNavigate();
     const formikLogin=useFormik({
         initialValues : {
@@ -66,6 +64,9 @@ const Login = () => {
                         <span className='text-gray-500'>Forgot password? <Link to="/recover" className="text-red-500">Recover Now</Link></span>
                     </div>
                 </form>
+
+                <div className=''>
+                </div>
             </div>
         </div>
 

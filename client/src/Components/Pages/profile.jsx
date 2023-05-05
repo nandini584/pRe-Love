@@ -89,7 +89,7 @@ const Profile = () => {
                     </div>
 
                     <div className='text-center py-4 flex flex-col'>
-                        <span><Link to="/recover" className="text-red-500">Change passowrd</Link></span>
+                        <span><Link to="/username" className="text-red-500">Change passowrd</Link></span>
                         <span><Link to="/profileview">Back to Profile</Link></span>
                     </div>
                 </form>

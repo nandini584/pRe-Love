@@ -27,7 +27,7 @@ const Register = () => {
         onSubmit: async values => {
             values = await Object.assign( values, { profile : file || '' })
             // console.log(values)
-            const registerPromise= registerUser(values)
+            const registerPromise=registerUser(values)
             toast.promise(registerPromise, {
                 loading: 'Creating...',
                 success : <b>Register Successfully...!</b>,

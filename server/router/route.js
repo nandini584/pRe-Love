@@ -1,5 +1,7 @@
+import passport from "passport";
 import { Router } from "express";
 const router=Router();
+
 
 //importing all the controllers
 import Auth, { localVariables }from '../middlewares/auth.js'
@@ -7,7 +9,7 @@ import * as controller from '../controllers/appController.js'
 import { registerMail } from "../controllers/mailer.js";
 
 /**POST Methods */
-router.route('/register').post(controller.register)
+router.route('/register').post(controller.register) //errors in front part 
 router.route('/registerMail').post(registerMail); //send email
 router.route('/authenticate').post( controller.verifyUser, (req,res) => res.end());//authenticate user
 router.route('/login').post( controller.verifyUser , controller.login); //to login into their account

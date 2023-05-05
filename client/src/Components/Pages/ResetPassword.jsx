@@ -1,12 +1,23 @@
-import React from 'react'
-import {Link} from "react-router-dom"
+import React, { useEffect } from 'react'
+import {Link, useNavigate, Navigate} from "react-router-dom"
 import avatar from '../Images/person.png'
-import {Toaster} from 'react-hot-toast';
+import toast,{Toaster} from 'react-hot-toast';
 import {useFormik} from 'formik';
 import {ValidateReset} from './Validate';
+import { resetPassword } from './helper';
+import { useAuthStore } from '../Store/store';
+import useFetch from './profileHook';
  
 import styles from '../styles/login.module.css'
 const ResetPassword = () => {
+    const navigate = useNavigate();
+    const {username } =  useAuthStore(state => state.auth)
+    const [{isLoading, apiData, status, serverError}] = useFetch('createRestSession')
+
+    useEffect(()=>{
+        console.log(apiData, status)
+    },[apiData, status])
+
     const formikChangePassword=useFormik({
         initialValues : {
             newPassword : '',
@@ -16,9 +27,23 @@ const ResetPassword = () => {
         validateOnBlur: false,
         validateOnChange: false,
         onSubmit: async values => {
-            console.log(values)
+            let resetPromise = resetPassword({username, password : values.newPassword})
+            toast.promise(resetPromise,{
+                loading : "Veriifying password",
+                success: <b>Password changed successfully</b>,
+                error: <b>Failed to change password ! </b>
+            })
+            resetPromise.then(()=>{
+                navigate('/login')
+            })
         }
     })
+
+    if(isLoading) return <h1 className='text-2xl font-bold'>isLoading</h1>;
+    if(serverError) return <h1 className='text-xl text-red-500'>{ navigate('/login')}</h1>
+    if(status && status !== 201){
+        return <Navigate to ={'/login'} replace={true} />
+    }
   return (
     <>
     <div className='container m-auto font-Montserrat'>
