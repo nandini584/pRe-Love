@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import useFetch from './profileHook';
 import styles from '../styles/login.module.css'
 import avatar from '../Images/person.png'
-
+import BottomNav from '../Commoncomponents/BottomNav';
 const ProfileView = () => {
     const [{apiData}] =  useFetch();
     const navigate= useNavigate();
@@ -12,6 +12,8 @@ const ProfileView = () => {
         navigate('/login')
     }
   return (
+    <>
+    
     <div className='min-w-full flex flex-col items-center text-[#464646]  bg-[#e1dfdf]'>
         <div className='flex flex-col gap-[10px] py-4'>
 
@@ -38,10 +40,10 @@ const ProfileView = () => {
             {/* third block */}
 
             <div className={styles.glass2}>
-                    <span className='font-[600] py-2 text-[110%]'>  Customer Care </span>
-                    <span className='py-2 border-b-[1px] border-[#DFDFDF]'> Terms of use </span>
-                    <span className='py-2 border-b-[1px] border-[#DFDFDF]'> FAQs </span>
-                    <span className='py-2'> Privacy Policy </span>
+                    <span className='font-[600] py-2 text-[110%]'> Customer Care </span>
+                    <span className='py-2 border-b-[1px] border-[#DFDFDF]'> <Link to='/ecommerce/termsofuse'>Terms of use</Link>  </span>
+                    <span className='py-2 border-b-[1px] border-[#DFDFDF]'> <Link to='/ecommerce/faqs'>FAQs</Link> </span>
+                    <span className='py-2'><Link to='/ecommerce/privacypolicy'>Privacy Policy</Link>  </span>
             </div>
 
             {/* fourth block */}
@@ -51,7 +53,12 @@ const ProfileView = () => {
                     <span className='py-2'> <Link to='/login' onClick={userLogout}>Logout</Link></span>
             </div>
         </div>
+       
+
     </div>
+        <BottomNav />
+    
+    </>
   )
 }
 

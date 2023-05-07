@@ -3,7 +3,7 @@ import axios from 'axios'
 import jwt_decode from 'jwt-decode'
 // axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN 
 
-axios.defaults.baseURL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`
+ axios.defaults.baseURL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`
 export async function getUsername( ){
     const token= localStorage.getItem('token');
     if(!token) return Promise.reject("Cannot find token")
@@ -27,9 +27,7 @@ export async function getUser({ username }){
         return { error : "Password doesn't match...!" }
     }
 }
-
 export async function registerUser( credentials ) {
-    console.log(credentials, axios.defaults.baseURL);
     try {
         const { username, password, email, profile } = credentials 
         const { data: { msg }, status } = await axios.post(`/api/register`, { username : username, password: password, email: email , profile: profile})
@@ -42,7 +40,8 @@ export async function registerUser( credentials ) {
     } catch (error) {
         return Promise.reject({error})
     }
-}
+}   
+
 
 export async function verifyPassword ({username , password } ){
     try {

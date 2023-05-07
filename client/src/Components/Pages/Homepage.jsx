@@ -3,9 +3,11 @@ import TestimonialBox from "./TestimonialBox"
 import Testimonials from "../Data/Testimonials.json"
 import Stories from "../Data/Stories.json"
 import StoriesBox from "./StoriesBox";
+import Navbar from "./Navbar";
 const HomePage=()=>{
     return(
         <>
+        <Navbar/>
         {/* first 2 images */}
         <div className="flex">
             <div className="flex items-center flex-col justify-center w-[calc(50%-5px)] h-[70vh] max-h-[488px] bg1 text-white font-Montserrat">
@@ -24,26 +26,7 @@ const HomePage=()=>{
         <div className="w-[100%] h-[32px] bg-[#A7B99D] mb-[40px]"></div>
 
 
-        {/* sell now */}
-        {/* <div className="flex items-center flex-col ">
-            <h4 className="text-center text-[3rem] text-[#666666] font-Montserrat"> Overflowing Wardrobes? Worry no more</h4>
-            <h2 className="text-center text-[8rem] text-[#494949] font-Montserrat">Sell & Earn</h2>
-            <h4 className="text-center text-[3rem] text-[#666666] font-[500] font-Montserrat">Easy Tracking. Doorstep Pickup. No Selling fees. Lucrative paybacks</h4>
-            <hr className="w-[285px] h-[9px] bg-[#A7B99D] m-auto mt-[30px] mb-[30px] rounded-[5px]"></hr>
-            <span className="font-Montserrat text-[4rem] text-[#666666] font-[500]">The Hassle Free Process</span>
-            <div className="grid gap-[2vw] text-center text-[2.2rem] font-Montserrat text-[#666666] mb-[60px] max-w-[70vw]" style={{
-                gridTemplateColumns:"33% 33% 33%",
-                gridTemplateRows:"50vh 10vh"
-            }}> 
-                <img src={require("../Images/1.png")} alt="online shopping" className="max-h-[50vh] w-auto" ></img>
-                <img src={require("../Images/2.png")} alt="online shopping" className="max-h-[50vh] w-auto" ></img>
-                <img src={require("../Images/3.png")} alt="online shopping" className="max-h-[50vh] w-auto" ></img>
-                <p>List Your pRe Loved Clothes</p>
-                <p>Pack and handover for delivery</p>
-                <p>Recieve Your Payback</p>
-            </div>
-            <button className="bg-[#A7B99D] w-[407px] h-[105px] text-[4.8rem] text-white rounded-[20px] font-Montserrat mb-[140px]">Sell Now</button>
-        </div> */}
+
 
         {/* why pre love */}
 
@@ -107,99 +90,7 @@ const HomePage=()=>{
         </div>
 
 
-{/* FAQ section */}
-        {/* <header className=" flex text-[2rem] font-Montserrat justify-center items-center mb-[10px]">
-            <div className="w-[292.5px] h-[1px] bg-[#A9A9A9]"></div>
-             <h3 className="text-[6.4rem] text-[#494949]">FAQs</h3>
-             <div className="w-[292.5px] h-[1px] bg-[#A9A9A9]"></div>
-        </header>
 
-        <div className="grid ml-[4%] mr-[4%] pb-[8%] FAQs" style={{
-                gridTemplateRows:"1fr 1fr 1fr 1fr",
-                gridTemplateColumns:"1fr 1fr",
-                gridGap:"5%",
-            }}>
-                    <div className="p-[50px] rounded-[38px] bg-white" style={{
-                        boxShadow:" 4px 4px 21px 6px rgba(0, 0, 0, 0.2)",
-                    }}>
-                        <h6 className="text-[2.4rem] text-[#9DAC93] font-Montserrat font-[700] mb-[15px]">Who can sell?</h6>
-                        <div className="h-[1px] bg-[#A9A9A9] mb-[5px]"></div>
-                        <p className="font-Montserrat text-[2rem] text-[#666666]">
-                        We entertain 2 types of sellers. Any individual who wants to do a closet clearance can do so through our website. Also, businesses who sell thrift fashion can do so through our site.
-                        </p>
-                    </div>
-
-                    <div className="p-[50px] rounded-[38px] bg-white" style={{
-                        boxShadow:" 4px 4px 21px 6px rgba(0, 0, 0, 0.2)",
-                    }}>
-                        <h6 className="text-[2.4rem] text-[#9DAC93] font-Montserrat font-[700] mb-[15px]">What are the services you provide?</h6>
-                        <div className="h-[1px] bg-[#A9A9A9] mb-[5px]"></div>
-                        <p className="font-Montserrat text-[2rem] text-[#666666]">
-                        You can buy an extensive range of pre-loved clothes from us sourced from some top brands. You can also register yourself as a seller either being an individual or a thrift store yourself.
-                        </p>
-                    </div>
-
-                    <div className="p-[50px] rounded-[38px] bg-white" style={{
-                        boxShadow:" 4px 4px 21px 6px rgba(0, 0, 0, 0.2)",
-                    }}>
-                        <h6 className="text-[2.4rem] text-[#9DAC93] font-Montserrat font-[700] mb-[15px]">What are the payment options?</h6>
-                        <div className="h-[1px] bg-[#A9A9A9] mb-[5px]"></div>
-                        <p className="font-Montserrat text-[2rem] text-[#666666]">
-                        We allow payments through credit card, debit card, net banking and UPI.
-                        </p>
-                    </div>
-
-                    <div className="p-[50px] h-[250px] rounded-[38px] bg-white" style={{
-                        boxShadow:" 4px 4px 21px 6px rgba(0, 0, 0, 0.2)",
-                    }}>
-                        <h6 className="text-[2.4rem] text-[#9DAC93] font-Montserrat font-[700] mb-[15px]">what is the return policy?</h6>
-                        <div className="h-[1px] bg-[#A9A9A9] mb-[5px]"></div>
-                        <p className="font-Montserrat text-[2rem] text-[#666666]">
-                        The return policy is subject specific. You can look this up in our T & C.
-                        </p>
-                    </div>
-
-                    <div className="p-[50px] rounded-[38px] bg-white" style={{
-                        boxShadow:" 4px 4px 21px 6px rgba(0, 0, 0, 0.2)",
-                    }}>
-                        <h6 className="text-[2.4rem] text-[#9DAC93] font-Montserrat font-[700] mb-[15px]">what is pRe Loved fashion?</h6>
-                        <div className="h-[1px] bg-[#A9A9A9] mb-[5px]"></div>
-                        <p className="font-Montserrat text-[2rem] text-[#666666]">
-                        Apparels that were loved by someone else before being offered for sale are called preloved fashion. This process is also called thrifting. At pRe-Love, we sell only those which are in good condition...
-                        </p>
-                    </div>
-
-                    <div className="p-[50px] rounded-[38px] bg-white" style={{
-                        boxShadow:" 4px 4px 21px 6px rgba(0, 0, 0, 0.2)",
-                    }}>
-                        <h6 className="text-[2.4rem] text-[#9DAC93] font-Montserrat font-[700] mb-[15px]">How to set up a seller account?</h6>
-                        <div className="h-[1px] bg-[#A9A9A9] mb-[5px]"></div>
-                        <p className="font-Montserrat text-[2rem] text-[#666666]">
-                        You have to register yourself with us by creating a seller account, agree to the terms and conditions stateside and then you can begin selling on our platform.
-                        </p>
-                    </div>
-
-                    <div className="p-[50px] rounded-[38px] bg-white" style={{
-                        boxShadow:" 4px 4px 21px 6px rgba(0, 0, 0, 0.2)",
-                    }}>
-                        <h6 className="text-[2.4rem] text-[#9DAC93] font-Montserrat font-[700] mb-[15px]">Are there any shipping charges?</h6>
-                        <div className="h-[1px] bg-[#A9A9A9] mb-[5px]"></div>
-                        <p className="font-Montserrat text-[2rem] text-[#666666]">
-                        Lorem ipsum
-                        </p>
-                    </div>
-
-                    <div className="p-[50px] rounded-[38px] bg-white" style={{
-                        boxShadow:" 4px 4px 21px 6px rgba(0, 0, 0, 0.2)",
-                    }}>
-                        <h6 className="text-[2.4rem] text-[#9DAC93] font-Montserrat font-[700] mb-[15px]">How are you making impact on the Environment?</h6>
-                        <div className="h-[1px] bg-[#A9A9A9] mb-[5px]"></div>
-                        <p className="font-Montserrat text-[2rem] text-[#666666]">
-                        Thrifting is the easiest and best way to practice sustainable fashion because it skips multiple checkpoints thus, reducing pollution in all parts of the value chain. It is based on the circular....
-                        </p>
-                    </div>
-
-        </div> */}
 
         <div className="w-[100%] h-[32px] bg-[#A7B99D] mt-[10px]"></div>
         <Footer/>
