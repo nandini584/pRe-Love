@@ -4,12 +4,27 @@
     box-shadow: 0 4px 0px #4747470b;
     backdrop-filter: blur(7.1px);
     border: 1px solid rgba(255,255,255,0.3);
-    @apply border-4 border-gray-50 shrink-0 h-3/4 w-[30%] rounded-3xl py-20 px-7 min-w-max ;
+    @apply border-4 border-gray-50 shrink-0 h-fit w-[30vw] rounded-3xl py-10 px-7 min-w-max  ;
+}
+.glass2{
+    background: rgba(255,255,255,0.85);
+    border-radius: 16px;
+    /* box-shadow: 0 8px 0px #4747470b; */
+    /* backdrop-filter: blur(10.1px); */
+    border: 1px solid rgba(255,255,255,0.3);
+    @apply flex flex-col text-[1.2rem] usm:text-[1.4rem] md:text-[2rem] shrink-0 h-3/4 w-[90vw] rounded-3xl py-4 px-8 ;
 }
 
 .profile_img{
     @apply border-4 border-gray-100 w-[135px] rounded-full shadow-lg cursor-pointer;
     @apply hover:border-gray-200
+}
+
+
+@media screen and (max-width : 800px) {
+    .profile_img{
+        @apply w-[100px] 
+    }
 }
 
 .textbox{

@@ -1,7 +1,7 @@
 // validate login
 
-import toast from 'react-hot-toast'
-   
+import toast from 'react-hot-toast'  
+import { authenticate } from './helper.js'  
 
 /****************Profile validation*********************/
 export async function ValidateProfile( values ) {
@@ -13,10 +13,8 @@ export async function ValidateProfile( values ) {
 
 
 function MobileVerify( errors={} ,values ) {
-    if( values.Mobile.toString().length != 10){
+    if( values.Mobile.toString().length !== 10){
         console.log(values.Mobile.toString().length)
-        errors.Mobile = toast.error('Please enter a valid Mobile Number...!')
-    }else if(/^\d+$/.test(values.Mobile)){
         errors.Mobile = toast.error('Please enter a valid Mobile Number...!')
     }
     return errors;
@@ -91,9 +89,30 @@ function verifyOTP( errors={},values ) {
 export async function ValidateLogin(values) {
     let errors = usernameVerify( {} ,values);
     passwordVerify( errors, values);
+
+    if(values.username) {
+        const { status } = await authenticate(values.username)
+        if (status !== 200 ){
+            errors.exist = toast.error( " User does not exist...!")
+        }
+    }
     return errors;
 }
 
+export async function usernameValidate(values){
+    const errors = usernameVerify({}, values);
+
+    if(values.username){
+        // check user exist or not
+        const { status } = await authenticate(values.username);
+        
+        if(status !== 200){
+            errors.exist = toast.error('User does not exist...!')
+        }
+    }
+
+    return errors;
+}
 function passwordVerify(error={} , values){
     const specialChars = /[`!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?~]/;
     if(!values.password){

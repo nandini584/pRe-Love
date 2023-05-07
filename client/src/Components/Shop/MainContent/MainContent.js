@@ -1,4 +1,4 @@
-import { Tiles } from "../../Tiles";
+import { Tiles } from "../Tiles";
 import itemdata from "../../Data/Items.json"
 
 
@@ -8,10 +8,10 @@ const MainContent = () => {
     <>
       <div id="page" className="flex">
         <SideBar />
-        <div className="grid" style={{
-          gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr 1fr 1fr "
-        }}>
-          {itemdata.map((value,key)=>{
+        <div className="flex flex-wrap">
+          {/* <Tiles></Tiles> */}
+          {itemdata.slice(0,5).map((value,key)=>{
+            console.log(value.url);
             return(
               <Tiles Name={value.Name} Photo={value.url} Description={value.Description} Pricing={value.Price} Discount={value.Discount}/>
             )

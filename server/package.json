@@ -1,12 +1,26 @@
 {
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-session": "^2.0.0",
     "cors": "^2.8.5",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.0",
+    "mailgen": "^2.0.27",
     "mongodb-memory-server": "^8.12.2",
     "mongoose": "^7.1.0",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^2.0.22"
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.22",
+    "openssl": "^2.0.0",
+    "otp-generator": "^4.0.1",
+    "passport": "^0.6.0",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-oauth2": "^1.7.0"
   },
   "name": "server",
   "version": "1.0.0",
