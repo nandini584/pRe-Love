@@ -2,7 +2,6 @@ import passport from "passport";
 import { Router } from "express";
 const router=Router();
 
-
 //importing all the controllers
 import Auth, { localVariables }from '../middlewares/auth.js'
 import * as controller from '../controllers/appController.js'
@@ -20,10 +19,8 @@ router.route('/generateOTP').get(controller.verifyUser, localVariables, controll
 router.route('/validateOTP').get(controller.verifyUser, controller.validateOTP); //to verify the OTP mathces 
 router.route('/createResetSession').get(controller.createResetSession); //to reset all variables
 
-
 /**PUT Methods */
 router.route('/updateuser').put( Auth , controller.udpdateUser); // update user profile
 router.route('/resetPassword').put(controller.verifyUser, controller.resetPassword); // use to reset password
-
 
 export default router;

@@ -1,5 +1,4 @@
 //this is the linking file of backend and frontend using axios 
-
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
 // axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN 
@@ -30,7 +29,7 @@ export async function getUser({ username }){
 }
 
 export async function registerUser( credentials ) {
-    console.log(credentials);
+    console.log(credentials, axios.defaults.baseURL);
     try {
         const { username, password, email, profile } = credentials 
         const { data: { msg }, status } = await axios.post(`/api/register`, { username : username, password: password, email: email , profile: profile})
