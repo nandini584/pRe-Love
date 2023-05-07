@@ -1,7 +1,7 @@
 import SearchIcon from '@mui/icons-material/Search';
 import React,{ useState } from 'react';
-import { Link } from 'react-router-dom';
-import ClearIcon from '@mui/icons-material/Clear';
+// import { Link } from 'react-router-dom';
+// import ClearIcon from '@mui/icons-material/Clear';
 const SearchBar = ({data}) => {
     const [FilteredData, SetFilteredData]=useState([]);
     const [wordEntered,setWordEntered]=useState("");

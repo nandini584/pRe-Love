@@ -4,7 +4,7 @@ import axios from 'axios'
 import jwt_decode from 'jwt-decode'
 // axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN 
 
- axios.defaults.baseURL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`
+axios.defaults.baseURL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`
 export async function getUsername( ){
     const token= localStorage.getItem('token');
     if(!token) return Promise.reject("Cannot find token")

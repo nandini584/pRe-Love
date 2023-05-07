@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import {Link,useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import { useAuthStore } from '../Store/store';
 import avatar from '../Images/person.png'
 import toast,{Toaster} from 'react-hot-toast';
-import {useFormik} from 'formik';
-import {ValidateOTP} from './Validate';
+// import {useFormik} from 'formik';
+// import {ValidateOTP} from './Validate';
 import { generateOTP, verifyOTP } from './helper';
  
 import styles from '../styles/login.module.css'

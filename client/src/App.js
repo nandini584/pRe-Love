@@ -1,10 +1,10 @@
 import './App.css';
-import {BrowserRouter, createBrowserRouter ,Route,RouterProvider, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import { AuthorizeUser } from './middlewares/auth';
 
 
 /*importing all the pages of the website*/ 
-import Navbar from './Components/Pages/Navbar';
+// import Navbar from './Components/Pages/Navbar';
 import Login from './Components/Pages/Login'
 import HomePage from './Components/Pages/Homepage';
 import MainContent from './Components/Shop/MainContent/MainContent';

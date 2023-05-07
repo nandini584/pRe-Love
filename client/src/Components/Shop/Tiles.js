@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+// import React, { useEffect, useRef } from "react";
 import { Splide, SplideSlide } from '@splidejs/react-splide';// import { generateSlides } from '../utils';
 import '@splidejs/splide/dist/css/splide.min.css';
 import cart from '../shopImages/img10.jpg'
