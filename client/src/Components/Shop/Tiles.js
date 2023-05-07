@@ -23,6 +23,13 @@ const Tiles=({Photo,Name,Description,Pricing,Discount,Review,ReviewCount})=>{
     return(
         <>
         <div className="flex flex-col h-fit w-fit px-4 py-4">
+        {/* {Testimonials.slice(0,15).map((value,key)=>{
+               return( 
+                <>
+               <TestimonialBox name={value.Name} photo={value.Photo} testimonial={value.testimonial}/>
+               </>
+               )
+            })} */}
 
             <Splide options={options}>
                 <SplideSlide>
