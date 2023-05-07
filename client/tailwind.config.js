@@ -23,7 +23,12 @@ module.exports = {
         'Lobster':['Lobster', 'cursive'],
         'Pacifino':['Pacifico', 'cursive'],
         'Montserrat':['Montserrat', 'sans-serif'],
-      }
+      },
+      colors:
+      {
+        'default_green': '#A7B99D',
+        'text_color': '#464646',
+      },
     },
   },
   plugins: [],
