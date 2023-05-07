@@ -18,7 +18,7 @@ const Tiles=({Photo,Name,Description,Pricing,Discount,Review,ReviewCount})=>{
         pauseOnHover : true,
         arrows : false,
         pagination : true,
-        lazyLoad : "nearby" 
+        lazyLoad : "nearby"
     }
     return(
         <>

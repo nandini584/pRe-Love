@@ -6,8 +6,8 @@ import ENV from '../config.js';
 const nodeGmailConfig ={
     service: 'gmail',
     auth: {
-        user: ENV.EMAIL,
-        pass: ENV.PASSWORD
+        user: ENV.SMTP_EMAIL,
+        pass: ENV.SMTP_PASSWORD
     }
 }
 // const transporter = nodemailer.createTransport(nodeConfig);
@@ -45,7 +45,7 @@ export const registerMail = async (req, res) => {
     const emailBody = MailGenerator.generate(email);
 
     const message = {
-        from : ENV.EMAIL,
+        from : ENV.SMTP_EMAIL,
         to: userEmail,
         subject : subject || "Signup Successful",
         html : emailBody

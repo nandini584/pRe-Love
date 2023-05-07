@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import ENV from '../config.js';
 import otpGenerator from 'otp-generator';
+import asyncCatch from "../middlewares/catchAsyncError.js"
 
 /**middlewares */
 export async function verifyUser( req, res, next ){
@@ -26,9 +27,55 @@ export async function verifyUser( req, res, next ){
     }
 }
 
+export async function verifyAdmin (req, res, next ) {
+    try {
+        const { username } = req.method == "GET" ? req.query : req.body ;
+
+        //checking for the match
+        UserModel.findOne({username}).then( data =>{
+            if(!data) return res.status(400).send({ error : " No user found "})
+            if(!data.role === "admin")  return res.status(400).send({error : "You are not an admin. Please contact the developer team if you think this is a mistake."})
+            next()
+        }).catch(error => {
+            // console.log(error)
+            return res.status(400).send( { error : " No user found "} )
+        })
+        // let exist = UserModel.findOne({username});
+        // console.log(exist);
+        // if(!exist) return res.status(400).send({ error : " No user found "})
+        // next();
+    } catch (error) {
+        return res.status(404).send({ error : "Authentication failed "})
+    }
+}
+
 //for post method register
 /**POST http://localhost:8080/api/register */
-export async function register(req,res){
+
+/**
+ exports.registerUser = asyncCatch(async (req, res, next) => {
+//   const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+//     folder: "avatars",
+//     width: 150,
+//     crop: "scale",
+//   });
+
+  const { name, email, password } = req.body;
+
+  const user = await User.create({
+    name,
+    email,
+    password,
+    avatar: {
+      public_id: myCloud.public_id,
+      url: myCloud.secure_url,
+    },
+  });
+
+  sendToken(user, 201, res);
+});
+ */
+export const register = asyncCatch( async (req,res) => {
 
     try {
         const { username, password, email, profile } = req.body;        
@@ -63,7 +110,6 @@ export async function register(req,res){
             })
         });
 
-        console.log(existEmail, existUsername)
         Promise.all([existUsername, existEmail]).then(() => {
 
                 if( password ){
@@ -97,7 +143,7 @@ export async function register(req,res){
         return res.status(500).send(error);
     }
 
-}
+})
 
 //for post method login
 /**POST http://localhost:8080/api/login */
