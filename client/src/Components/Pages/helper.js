@@ -29,7 +29,6 @@ export async function getUser({ username }){
     }
 }
 export async function registerUser( credentials ) {
-    console.log(credentials, axios.defaults.baseURL, process.env.REACT_APP_SERVER_DOMAIN );
     try {
         const { username, password, email, profile } = credentials 
         const { data: { msg }, status } = await axios.post(`/api/register`, { username : username, password: password, email: email , profile: profile})
