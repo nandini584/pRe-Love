@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import HomeIcon from '../Images/home.svg'
 import ProfileIcon from '../Images/ProfileIcon.svg'
 import WishlistIcon from '../Images/wishlist.svg'
@@ -19,8 +19,7 @@ function BottomNav() {
       <Link to='/profileview/bag'><img src={CartIcon} alt="Cart" /></Link>
 
       <Link to='/ecommerce/faqs'><img src={FAQsIcon} alt="FAQs" /></Link>
-
-
+      
     </div>
   )
 }

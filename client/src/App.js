@@ -1,10 +1,10 @@
 import './App.css';
-import {BrowserRouter, createBrowserRouter ,Route,RouterProvider, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import { AuthorizeUser } from './middlewares/auth';
 
 
 /*importing all the pages of the website*/ 
-import Navbar from './Components/Pages/Navbar';
+// import Navbar from './Components/Pages/Navbar';
 import Login from './Components/Pages/Login'
 import HomePage from './Components/Pages/Homepage';
 import MainContent from './Components/Shop/MainContent/MainContent';
@@ -21,6 +21,9 @@ import Termsofuse from './Components/CustomerCare/Termsofuse';
 import Home from './Components/Ecommerce/Home';
 import Wishlist from './Components/Ecommerce/Wishlist';
 import Bag from './Components/Ecommerce/Bag';
+import LoadingPage from './Components/Loading Page/LoadingPage';
+import ProductPage from './Components/Ecommerce/ProductPage';
+import SearchResults from './Components/Ecommerce/SearchResults';
 function App() {
   // const router=createBrowserRouter([
   //   {
@@ -76,6 +79,11 @@ function App() {
           <Route path='/ecommerce/privacypolicy' element={<Privacypolicy />}/>
           <Route path='/ecommerce/termsofuse' element={<Termsofuse />}/>
           <Route path='/ecommerce' element={<Home />}/>
+          <Route path='/loading' element={<LoadingPage/>}/>
+          <Route path='/products'  element={<SearchResults/>}/>
+          <Route path='/products/:keyword'  element={<SearchResults/>}/>
+          <Route path='/product/:id' element={<ProductPage/>}/>
+
           <Route path='*' element={<PageNotFound/>}/>
         </Routes>
       </BrowserRouter>

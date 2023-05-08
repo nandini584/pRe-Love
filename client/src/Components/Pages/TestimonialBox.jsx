@@ -9,7 +9,7 @@ const TestimonialBox = ({name,photo,testimonial}) => {
         <p className="text-center mb-[20px]">{testimonial}</p>
         <div className="w-[120px] h-[1px] bg-[#A9A9A9]"></div>
         <div className="w-[3px] h-[3px] bg-[#A9A9A9] mt-[10px] mb-[10px]"></div>
-        <img src={require(`../Images/${photo}`)} alt="photo" className="border-[1px] border-[#A9A9A9] rounded-[50%]"/>
+        <img src={require(`../Images/${photo}`)} alt="avatar" className="border-[1px] border-[#A9A9A9] rounded-[50%]"/>
         <h6>{name}</h6>
         <div className="w-[3px] h-[3px] bg-[#A9A9A9] mt-[20px]"></div>
     </div>

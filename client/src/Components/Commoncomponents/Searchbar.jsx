@@ -1,18 +1,31 @@
-import React from 'react'
-
+import React,{useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 function Searchbar() {
+    const navigate = useNavigate();
+    const [keyword, setkeyword] = useState()
     const handlechange =(e) =>{
-        e.preventDefault()
-        console.log(e.target.value)
+        setkeyword(e.target.value)
+    } 
+    const searchSubmitHandler =(e) =>{
+        e.preventDefault();
+        if( keyword && keyword.trim() ){
+            navigate(`/products/${keyword}`)
+        }else{
+            navigate('/products')
+        }
     }
   return (
     <div className='flex flex-row justify-evenly my-12 align-center bg-[#F5F5F5]'>
+
         <img src={require("../Images/logo.png")} alt="logo.png" className='h-14'/>
+
         <div className='border-2 rounded-full border-default_green flex flex-row px-3 py-2 w-3/5'> 
+
         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.16659 15.5002C4.1165 15.5002 0.833252 12.2169 0.833252 8.16683C0.833252 4.11674 4.1165 0.833496 8.16659 0.833496C12.2167 0.833496 15.4999 4.11674 15.4999 8.16683C15.4999 9.86148 14.9251 11.4219 13.9598 12.6637L18.8981 17.602L17.6017 18.8983L12.6634 13.96C11.4216 14.9253 9.86124 15.5002 8.16659 15.5002ZM13.6666 8.16683C13.6666 11.2044 11.2042 13.6668 8.16659 13.6668C5.12902 13.6668 2.66659 11.2044 2.66659 8.16683C2.66659 5.12926 5.12902 2.66683 8.16659 2.66683C11.2042 2.66683 13.6666 5.12926 13.6666 8.16683Z" fill="#A7B99D"/>
         </svg> 
-        <form action="" className=''>
+
+        <form onSubmit={searchSubmitHandler} className=''>
             <input type="text" placeholder='Search' className='text-2xl pl-3 outline-none bg-[#F5F5F5]' onChange={handlechange}/>
         </form>
 

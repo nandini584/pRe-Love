@@ -14,15 +14,22 @@ class ApiFeatures {
                 $options : "i" //to make it case insensitive          
             }
         } : {}
-
-        this.query.find({...keyword})
+        // console.log({...keyword})
+        const category = this.queryStr.category ?{
+            category:{
+                $regex : this.queryStr.category,//regex is a mongo db operator which is used to create regular expressions
+                $options : "i" //to make it case insensitive    
+            }
+        }:{}
+        console.log({...category},{...keyword})
+        this.query.find({...keyword}).find({...category})
         return this;
     }
 
     filter(){
         const queryCopy = {...this.queryStr}
         //removing some fields or category
-        const removeFields = ["keyword","page","limit"];
+        const removeFields = ["keyword","page","limit","category"];
         removeFields.forEach((key) => delete queryCopy[key])
 
         // filters for Price and Rating
