@@ -13,9 +13,9 @@ const Items=({icon, product})=>{
         perMove : 1,
         width : "150px",
         height : "200px",
-        autoplay : true,
-        interval : 5000,
-        pauseOnHover : true,
+        autoplay : false,
+        // interval : 5000,
+        // pauseOnHover : true,
         arrows : false,
         pagination : true,
         lazyLoad : "nearby"
