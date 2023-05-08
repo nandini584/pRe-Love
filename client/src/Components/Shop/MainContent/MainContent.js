@@ -7,7 +7,9 @@ const MainContent = () => {
   return (
     <>
       <div id="page" className="flex">
+        <div className="hidden md:flex">
         <SideBar />
+        </div>
         <div className="flex flex-wrap">
           {/* <Tiles></Tiles> */}
           {itemdata.slice(0,5).map((value,key)=>{

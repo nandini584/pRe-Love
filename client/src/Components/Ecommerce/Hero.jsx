@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from '../styles/login.module.css'
+import styles from '../styles/general.module.css'
 function Hero() {
   return (
-    <div className='flex flex-row hero_section justify-center'>
-        <div className='my-5'>
+    <div className='flex flex-row hero_section justify-center '>
+        <div className='my-8'>
 
         <img src={require('../Images/Frame 13.png')} alt="" className={styles.hero}/>
         <img src={require('../Images/Frame 9.png')} alt="" className={styles.hero}/>

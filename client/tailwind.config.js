@@ -28,6 +28,8 @@ module.exports = {
       {
         'default_green': '#A7B99D',
         'text_color': '#464646',
+        'premium_up':'#1E211C',
+        'premium_down':'#151713',
       },
     },
   },
