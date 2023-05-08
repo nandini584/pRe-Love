@@ -24,6 +24,8 @@ import Bag from './Components/Ecommerce/Bag';
 import LoadingPage from './Components/Loading Page/LoadingPage';
 import ProductPage from './Components/Ecommerce/ProductPage';
 import SearchResults from './Components/Ecommerce/SearchResults';
+import Female from './Components/Ecommerce/Genderpage/Female';
+import Male from './Components/Ecommerce/Genderpage/Male';
 function App() {
   // const router=createBrowserRouter([
   //   {
@@ -83,6 +85,8 @@ function App() {
           <Route path='/products'  element={<SearchResults/>}/>
           <Route path='/products/:keyword'  element={<SearchResults/>}/>
           <Route path='/product/:id' element={<ProductPage/>}/>
+          <Route path='/shop/female' element={<Female/>}/>
+          <Route path='/shop/male' element={<Male/>}/>
 
           <Route path='*' element={<PageNotFound/>}/>
         </Routes>

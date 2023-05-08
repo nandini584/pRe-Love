@@ -9,11 +9,11 @@ function Categories() {
         <div className=' flex flex-col flex-warp items-center md:flex-row md:justify-center'>
             <div className='px-0 md:px-6 relative top-[-5rem]'>
 
-          <Card gender="Women" src={Women} />
+          <Card title1="Checkout the Exclusive" title2=" Women Collection Now" src={Women} />
             </div>
             <div className='px-0 md:px-6 relative top-[-10rem] md:top-[-5rem]'>
 
-          <Card gender="Men" src={Men}/>
+          <Card title1='Checkout the Exclusive' title2="Men Collection Now" src={Men}/>
             </div>
         </div>
     </div>
