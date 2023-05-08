@@ -4,17 +4,16 @@ import BottomNav from '../Commoncomponents/BottomNav';
 import Hero from '../Ecommerce/Hero'
 import Categories from './Categories';
 import Premium from './Premium';
-
-function Home() {
-  return (
-import Hero from '../Ecommerce/Hero';
 import { clearErrors, getProduct } from '../actions/productAction';
 import {useSelector, useDispatch} from 'react-redux';
 import { Items } from '../Shop/Items';
 import WishlistIcon from '../Images/wishlist.svg'
 import LoadingPage from '../Loading Page/LoadingPage';
 import toast,{ Toaster } from 'react-hot-toast';
+
+
 const Home = () => {
+
   const dispatch = useDispatch();
   // const alert = useAlert();
   const {loading, error, products, productsCount} = useSelector(

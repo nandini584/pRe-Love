@@ -4,6 +4,16 @@ import { clearErrors, getProductDetails } from '../actions/productAction';
 import { useParams } from 'react-router-dom';
 import toast,{ Toaster } from 'react-hot-toast';
 
+// const [currentPage, setCurrentPage] = useState(1)
+//const {keyword} = useParams();
+// const [price, setPrice] = useState([0,25000]);
+// const dispatch = useDispatch();
+// const setCurrentPageNo = (e) =>{
+//     setCurrentPage(e);
+// }
+// const priceHandler = (event, newPrice) => {
+//     setPrice(newPrice);
+//   };
 const ProductPage = () => {
     const {id}=useParams()
     console.log(id)
