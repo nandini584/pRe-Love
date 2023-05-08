@@ -32,8 +32,8 @@ const ProfileView = () => {
             {/* second block */}
             <div className={styles.glass2}>
                     <span className='font-[600] py-2 text-[110%]'>  Orders  </span>
-                    <span className='py-2 border-b-[1px] border-[#DFDFDF]'> Wishlist </span>
-                    <span className='py-2 border-b-[1px] border-[#DFDFDF]'> Bag </span>
+                    <span className='py-2 border-b-[1px] border-[#DFDFDF]'><Link to='/profileView/wishlist'> Wishlist </Link> </span>
+                    <span className='py-2 border-b-[1px] border-[#DFDFDF]'> <Link to='/profileView/bag'>Bag</Link> </span>
                     <span className='py-2'> Order Tracking & confirmation </span>
             </div>
 

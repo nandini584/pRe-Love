@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
 import Searchbar from '../Commoncomponents/Searchbar'
 import BottomNav from '../Commoncomponents/BottomNav';
+import Hero from '../Ecommerce/Hero'
+import Categories from './Categories';
+import Premium from './Premium';
+
+function Home() {
+  return (
 import Hero from '../Ecommerce/Hero';
 import { clearErrors, getProduct } from '../actions/productAction';
 import {useSelector, useDispatch} from 'react-redux';
@@ -27,6 +33,9 @@ const Home = () => {
       <Toaster position='top-center' reverseOrder={false}/>   
         <Searchbar />
         <Hero />
+        <Categories/>
+        <Premium />
+        <i className='text-xl font-bold pt-4 text-center flex flex-row justify-center'>“Making Sustainability a  &#160;<span className='line-through'> choice </span> &#160; habit in India.”</i>
         <div className='flex flex-wrap'>
           {products && products.slice(0,6).map((value,key)=>{
             return(<Items product={value} icon={WishlistIcon}/>)

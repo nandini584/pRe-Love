@@ -1,0 +1,31 @@
+.primary_btn{
+    background-color: #A7B99D ;
+    width: 146px;
+    height: 38px;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.secondary_btn{
+    width: 146px;
+    height: 38px;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+
+    border: white solid 3px;
+
+}
+.hero_section{
+    @apply flex flex-row justify-center
+}
+.hero{
+    @apply mb-4 mx-2;
+}
+.hero:hover{
+    background-image: 
+    -moz-linear-gradient(180deg, rgba(255, 23, 23, 0.5) 0%, rgba(131, 11, 10, 0) 37.94%);
+    filter: blur(1px);
+    
+}
