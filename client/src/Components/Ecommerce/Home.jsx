@@ -4,10 +4,7 @@ import BottomNav from '../Commoncomponents/BottomNav';
 import Hero from '../Ecommerce/Hero'
 import Categories from './Categories';
 import Premium from './Premium';
-
-function Home() {
-  return (
-import Hero from '../Ecommerce/Hero';
+import Hero from './Hero.jsx';
 import { clearErrors, getProduct } from '../actions/productAction';
 import {useSelector, useDispatch} from 'react-redux';
 import { Items } from '../Shop/Items';
