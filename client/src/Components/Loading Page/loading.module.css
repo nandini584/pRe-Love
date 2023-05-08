@@ -1,0 +1,15 @@
+.loading{
+    @apply w-[100vw] h-[100vh] bg-white grid place-items-center max-w-[100vw];
+}
+
+@keyframes loadingRotate {
+    to{
+        transform: rotateZ(-360deg);
+    }
+}
+.loader{
+    @apply w-[10vmax] h-[10vmax];
+    border-bottom : 5px solid rgb(110,110,110);
+    border-radius: 50%;
+    animation: loadingRotate 800ms linear infinite;
+}

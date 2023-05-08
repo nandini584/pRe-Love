@@ -11,12 +11,10 @@ import styles from '../styles/login.module.css'
 const Recover = () => {
     const navigate = useNavigate();
     const { username } = useAuthStore(state => state.auth);
-    // console.log(username)
     var [OTP, setOTP] = useState(); 
 
     useEffect(()=>{
         generateOTP( username ).then((OTP)=>{
-            // console.log(OTP);
 
             if(OTP) return toast.success(" An OTP has been sent to your email");
             return toast.error("Failed to generate OTP! Please try again after sometime")
@@ -48,7 +46,6 @@ const Recover = () => {
         })
 
         resendPromise.then((OTP)=>{
-            // console.log(OTP);
         })
     }
 

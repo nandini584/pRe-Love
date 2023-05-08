@@ -32,7 +32,6 @@ export async function registerUser( credentials ) {
         const { username, password, email, profile } = credentials 
         const { data: { msg }, status } = await axios.post(`/api/register`, { username : username, password: password, email: email , profile: profile})
 
-        console.log(status)
         if(status === 201){
             await axios.post(`/api/registerMail`,  { username, userEmail : email, text : msg})
         }
@@ -69,7 +68,7 @@ export async function generateOTP( username ){
         const {data : { code } , status } = await axios.get( `/api/generateOTP` , { params : { username }})
 
         //send mail with OTP
-        if (status == 201){
+        if (Number(status) === 201){
             const { data : {email }} = await getUser({ username });
             const text = `Your OTP for Password reset request is ${code}. PLEASE DO NOT SHARE THIS TO ANYONE. `     
             await axios.post(`/api/registerMail`,{ username ,userEmail : email , text , subject : "OTP for password recovery"})

@@ -51,9 +51,9 @@ connect().then(() => {
     console.log(error,"Invalid database connection...!");
 })
 
-//unhandled promise rejection
-// process.on("unhandledRejection",err=>{
-//     console.log(`Error : ${err.message}`)
-//     console.log("shutting down the server due to unhandled promise rejection")
-//     server.close()
-// })
+// unhandled promise rejection
+process.on("unhandledRejection",err=>{
+    console.log(`Error : ${err.message}`)
+    console.log("shutting down the server due to unhandled promise rejection")
+    server.close()
+})

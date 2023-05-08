@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-hot-toast": "^2.4.0",
+    "react-js-pagination": "^3.0.3",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
     "react-scripts": "^5.0.1",
@@ -63,5 +64,6 @@
   "main": "postcss.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "proxy": "http://172.17.34.183:8080"
 }

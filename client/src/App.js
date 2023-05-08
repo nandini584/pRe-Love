@@ -21,6 +21,9 @@ import Termsofuse from './Components/CustomerCare/Termsofuse';
 import Home from './Components/Ecommerce/Home';
 import Wishlist from './Components/Ecommerce/Wishlist';
 import Bag from './Components/Ecommerce/Bag';
+import LoadingPage from './Components/Loading Page/LoadingPage';
+import ProductPage from './Components/Ecommerce/ProductPage';
+import SearchResults from './Components/Ecommerce/SearchResults';
 function App() {
   // const router=createBrowserRouter([
   //   {
@@ -76,6 +79,11 @@ function App() {
           <Route path='/ecommerce/privacypolicy' element={<Privacypolicy />}/>
           <Route path='/ecommerce/termsofuse' element={<Termsofuse />}/>
           <Route path='/ecommerce' element={<Home />}/>
+          <Route path='/loading' element={<LoadingPage/>}/>
+          <Route path='/products'  element={<SearchResults/>}/>
+          <Route path='/products/:keyword'  element={<SearchResults/>}/>
+          <Route path='/product/:id' element={<ProductPage/>}/>
+
           <Route path='*' element={<PageNotFound/>}/>
         </Routes>
       </BrowserRouter>

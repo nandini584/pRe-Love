@@ -4,6 +4,7 @@ import React,{ useState } from 'react';
 // import ClearIcon from '@mui/icons-material/Clear';
 const SearchBar = ({data}) => {
     const [FilteredData, SetFilteredData]=useState([]);
+    console.log(FilteredData);//**********************************remove this line for no errors to pop again and again */
     const [wordEntered,setWordEntered]=useState("");
     const handleFilter=(event)=>{
         const searchWord=event.target.value;
@@ -17,10 +18,10 @@ const SearchBar = ({data}) => {
         else
         SetFilteredData(newFilter);
     }
-    const ClearInput=()=>{
-        SetFilteredData([]);
-        setWordEntered("");
-    }
+    // const ClearInput=()=>{
+    //     SetFilteredData([]);
+    //     setWordEntered("");
+    // }
     return ( 
         <>
             <div className="rounded-[10px] h-[6vh] w-[40vw] bg-[#E0E2E1] flex items-center gap-[10px] pl-[6px] max-w-[700px]">

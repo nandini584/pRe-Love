@@ -1,4 +1,4 @@
-import { Tiles } from "../Tiles";
+// import { Tiles } from "../Tiles";
 import itemdata from "../../Data/Items.json"
 
 
@@ -10,13 +10,12 @@ const MainContent = () => {
         <SideBar />
         <div className="flex flex-wrap">
           {/* <Tiles></Tiles> */}
-          {itemdata.slice(0,5).map((value,key)=>{
-            console.log(value.url);
+          {/* {itemdata.slice(0,5).map((value,key)=>{
             return(
               <Tiles Name={value.Name} Photo={value.url} Description={value.Description} Pricing={value.Price} Discount={value.Discount}/>
             )
           })
-          }
+          } */}
         </div>
       </div>
     </>
