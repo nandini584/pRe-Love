@@ -44,7 +44,7 @@ const Footer = () => {
    
         </div>
         <div className='w-[50%] flex items-center justify-center content-center'>
-            <img src={require("../Images/Megaphone.png")} className='mr-[40px] w-[15vw]'/>
+            <img src={require("../Images/Megaphone.png")} alt='Megaphone' className='mr-[40px] w-[15vw]'/>
             <div>
                 <p className='font-[700] text-[#494949] text-[4.8rem]'>Get in Touch</p>
                 <div className='flex w-[50%] justify-around'>

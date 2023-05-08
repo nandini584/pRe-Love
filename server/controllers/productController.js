@@ -40,8 +40,7 @@ export const createProduct =  asyncCatch(async (req, res,next)=>{ //this is what
 
 
 //to get all the products
-export const getAllProducts = asyncCatch(asyncCatch(async (req,res) => {
-
+export const getAllProducts = asyncCatch(async (req,res) => {
     const resultPerPage = 8;
      const productsCount = await Product.countDocuments();
     const apiFeature = new ApiFeatures(Product.find(),req.query).search().filter().pagination(resultPerPage)
@@ -57,7 +56,7 @@ export const getAllProducts = asyncCatch(asyncCatch(async (req,res) => {
         productsCount,
         filteredProductsCount
     })
-}))
+})
 
 // Get All Product (Admin)
 export const getAdminProducts = asyncCatch(async (req, res, next) => {

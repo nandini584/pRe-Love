@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {Link, useNavigate, Navigate} from "react-router-dom"
+import {useNavigate, Navigate} from "react-router-dom"
 import avatar from '../Images/person.png'
 import toast,{Toaster} from 'react-hot-toast';
 import {useFormik} from 'formik';

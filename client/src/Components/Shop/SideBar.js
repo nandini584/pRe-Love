@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Categories from "./Categories";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,7 @@ const SideBar = () => {
   const toggleDropdown = (i) => {
     const list = document.getElementsByClassName("list");
     const arrow = document.getElementsByClassName("arrow");
-    if (list[i].style.height == "0px") {
+    if (list[i].style.height.toString() === "0px".toString()) {
       list[i].style.height = "160px";
       arrow[i].classList.remove("fa-angle-down");
       arrow[i].classList.add("fa-angle-up");

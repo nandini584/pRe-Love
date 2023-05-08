@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {Link, useNavigate} from "react-router-dom"
 import avatar from '../Images/person.png'
 import toast, {Toaster} from 'react-hot-toast';
 import {useFormik} from 'formik';
 import {ValidateLogin} from './Validate';
-import { useAuthStore } from '../Store/store'; 
+// import { useAuthStore } from '../Store/store'; 
 import styles from '../styles/login.module.css'
 import { verifyPassword } from './helper';
 

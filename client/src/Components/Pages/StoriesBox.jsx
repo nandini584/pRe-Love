@@ -8,7 +8,7 @@ const StoriesBox = ({photo,name,story,rating}) => {
       boxShadow: " 4px 4px 21px 6px rgba(0, 0, 0, 0.25)",
     }}>
       <div className="flex items-center">
-        <img src={require("../Images/Ellipse1.png")} alt="photo" className="border-[1px] border-[#A9A9A9] rounded-[50%]" />
+        <img src={require("../Images/Ellipse1.png")} alt="avatar" className="border-[1px] border-[#A9A9A9] rounded-[50%]" />
         <div className="ml-[4px] font-Montserrat ">
           <h6>Saniya Malhotra</h6>
           {

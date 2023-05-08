@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import {Link,useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import { useAuthStore } from '../Store/store';
 import avatar from '../Images/person.png'
 import toast,{Toaster} from 'react-hot-toast';
-import {useFormik} from 'formik';
-import {ValidateOTP} from './Validate';
+// import {useFormik} from 'formik';
+// import {ValidateOTP} from './Validate';
 import { generateOTP, verifyOTP } from './helper';
  
 import styles from '../styles/login.module.css'
 const Recover = () => {
     const navigate = useNavigate();
     const { username } = useAuthStore(state => state.auth);
-    // console.log(username)
     var [OTP, setOTP] = useState(); 
 
     useEffect(()=>{
         generateOTP( username ).then((OTP)=>{
-            // console.log(OTP);
 
             if(OTP) return toast.success(" An OTP has been sent to your email");
             return toast.error("Failed to generate OTP! Please try again after sometime")
@@ -48,7 +46,6 @@ const Recover = () => {
         })
 
         resendPromise.then((OTP)=>{
-            // console.log(OTP);
         })
     }
 

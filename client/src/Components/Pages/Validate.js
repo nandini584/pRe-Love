@@ -14,7 +14,6 @@ export async function ValidateProfile( values ) {
 
 function MobileVerify( errors={} ,values ) {
     if( values.Mobile.toString().length !== 10){
-        console.log(values.Mobile.toString().length)
         errors.Mobile = toast.error('Please enter a valid Mobile Number...!')
     }
     return errors;
@@ -78,7 +77,7 @@ export async function ValidateOTP ( values ) {
 }
 
 function verifyOTP( errors={},values ) {
-    if(values.OTP != 123456){
+    if(Number(values.OTP) !== 123456){
         errors.OTP = toast.error( 'Invalid OTP....!')
     }
 

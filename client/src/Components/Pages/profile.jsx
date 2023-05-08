@@ -29,7 +29,6 @@ const Profile = () => {
         enableReinitialize: true,
         onSubmit: async values => {
             values = await Object.assign( values, { profile : file ||apiData?.profile ||'' })
-            // console.log(values => ({...values, firstName : "rimsi"}))
             const updatePromise = updateUser({firstName :values.firstName, lastName: values.lastName, mobile: values.Mobile, address: values.address, email: values.email, profile: values.profile });
             toast.promise(updatePromise,{
                 loading : "updating...",

@@ -3,7 +3,6 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import ENV from '../config.js';
 import otpGenerator from 'otp-generator';
-import asyncCatch from "../middlewares/catchAsyncError.js"
 
 /**middlewares */
 export async function verifyUser( req, res, next ){
@@ -75,7 +74,7 @@ export async function verifyAdmin (req, res, next ) {
   sendToken(user, 201, res);
 });
  */
-export const register = asyncCatch( async (req,res) => {
+export const register = async (req,res) => {
 
     try {
         const { username, password, email, profile } = req.body;        
@@ -143,7 +142,7 @@ export const register = asyncCatch( async (req,res) => {
         return res.status(500).send(error);
     }
 
-})
+}
 
 //for post method login
 /**POST http://localhost:8080/api/login */
