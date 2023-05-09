@@ -8,17 +8,37 @@ import productRouter from './router/productRoute.js';
 import  errorMiddleware from './middlewares/Error.js';
 import userRouter from  './router/userRoute.js'
 import cookieParser from 'cookie-parser';
+import cloudinary from 'cloudinary';
+import ENV from './config.js'
+import bodyParser from 'body-parser'
+import fileUpload from 'express-fileupload';
 const app = express();//
 const port = process.env.PORT || 8080 ;
 // middlewares
 
+app.use((req, res, next) => {
+    // Set the Access-Control-Allow-Origin header to allow requests from any origin
+    res.setHeader('Access-Control-Allow-Origin',  '*');
+    
+    // Set the Access-Control-Allow-Credentials header to true to allow cookies to be sent with cross-origin requests
+    res.setHeader('Access-Control-Allow-Credentials', true);
+  
+    next();
+});
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors()); // i am not adding configurartions as of now lets see what happens 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(fileUpload());
+
+app.use(cors({ origin: 'http://localhost:3000', credentials: true })); // i am not adding configurartions as of now lets see what happens 
 app.use(morgan('tiny'));
 app.disable('x-powered-by'); // less hackers know about our stack
 
-
+cloudinary.config({
+    cloud_name: ENV.CLOUD_NAME,
+    api_key: ENV.CLOUD_API_KEY,
+    api_secret: ENV.CLOUD_API_SECRET
+})
 process.on("uncaughtException",err=>{
     console.log(`Error : ${err.message}`)
     console.log("shutting down the server due to unhandled promise rejection")

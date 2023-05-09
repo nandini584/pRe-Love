@@ -5,16 +5,16 @@ import jwt from 'jsonwebtoken';
 import User from '../models/userModel2.js';
 
 export const isAuthenticatedUser = asyncCatch(async (req, res, next) => {
-//    console.log(req.cookies);
+   console.log("hi from me",req.cookies);
     const {token} = req.cookies
     if (!token) {
     return next(new Errorhandler("Please Login to access this resource", 401));
     }
 
   const decodedData = jwt.verify(token, ENV.JWT_token);
-
+    console.log(decodedData);
   req.user = await User.findById(decodedData.id);
-  // console.log(req.user)
+  console.log(req.user)
   next();
 });
 
