@@ -24,6 +24,8 @@ import store from './Components/Store/store_redux'
 import UpdatePassword from './Components/User features/updatePassword';
 import ProtectedRoute from './ProtectedRoutes'
 import ForgotPassword from './Components/User features/ForgotPassword';
+import Female from './Components/Ecommerce/Genderpage/Female';
+import Male from './Components/Ecommerce/Genderpage/Male';
 function App() {
 useEffect(()=>{
   store.dispatch(loadUser())
@@ -54,6 +56,8 @@ useEffect(()=>{
           <Route path='/products'  element={<SearchResults/>}/>
           <Route path='/products/:keyword'  element={<SearchResults/>}/>
           <Route path='/product/:id' element={<ProductPage/>}/>
+          <Route path='/shop/female' element={<Female/>}/>
+          <Route path='/shop/male' element={<Male/>}/>
 
           <Route path='*' element={<PageNotFound/>}/>
           
