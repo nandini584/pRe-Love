@@ -17,16 +17,18 @@ const SearchResults = () => {
 
     }
     const priceHandler = (event, newPrice) => {
+        console.log(price)
         setPrice(newPrice);
       };
     const {products,loading,error,productsCount,resultPerPage,filteredProductsCount} = useSelector((state)=>state.products)
     useEffect(()=>{
         if(error){
             toast.error(error)
+            dispatch(clearErrors())
         }
-        dispatch(getProduct(keyword,currentPage))
-    },[dispatch,keyword,error,currentPage])
-
+        dispatch(getProduct(keyword,currentPage,price))
+    },[dispatch,keyword,error,currentPage,price])
+    const count = filteredProductsCount;
   return (
   <Fragment>
     {loading ? <LoadingPage/>:

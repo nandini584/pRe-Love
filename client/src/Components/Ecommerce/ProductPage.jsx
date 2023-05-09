@@ -3,24 +3,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { clearErrors, getProductDetails } from '../actions/productAction';
 import { useParams } from 'react-router-dom';
 import toast,{ Toaster } from 'react-hot-toast';
+import LoadingPage from '../Loading Page/LoadingPage';
 
-// const [currentPage, setCurrentPage] = useState(1)
-//const {keyword} = useParams();
-// const [price, setPrice] = useState([0,25000]);
-// const dispatch = useDispatch();
-// const setCurrentPageNo = (e) =>{
-//     setCurrentPage(e);
-// }
-// const priceHandler = (event, newPrice) => {
-//     setPrice(newPrice);
-//   };
 const ProductPage = () => {
-    const {id}=useParams()
-    console.log(id)
+    const {id}=useParams();
     const dispatch = useDispatch();
 
     const {products,loading,error} = useSelector((state)=>state.productDetails)
-// console.log(states.products)
     useEffect(()=>{
         if(error){
              toast.error(error)
@@ -29,7 +18,7 @@ const ProductPage = () => {
         dispatch(getProductDetails(id))
     },[dispatch,id,error])
     const cost = Math.round(products.price*(100-products.discount)/100);
-  return (
+  return (loading? <LoadingPage/> :(
     <Fragment>
         <Toaster position='top-center' reverseOrder={false}/> 
         <div className="productImages">
@@ -53,7 +42,7 @@ const ProductPage = () => {
             {cost}
         </div>
         {/* {products} */}
-    </Fragment>
+    </Fragment>)
   )
 }
 

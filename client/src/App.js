@@ -1,20 +1,14 @@
 import './App.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import { AuthorizeUser } from './middlewares/auth';
-
+import { useEffect } from 'react';
+import { loadUser } from './Components/actions/userActions';
 
 /*importing all the pages of the website*/ 
-// import Navbar from './Components/Pages/Navbar';
-import Login from './Components/Pages/Login'
+import ProfileView from './Components/User features/profileView';
+import ProfileUpdate from './Components/User features/profileUpdate';
 import HomePage from './Components/Pages/Homepage';
-import MainContent from './Components/Shop/MainContent/MainContent';
-import Register from './Components/Pages/Register';
 import PageNotFound from './Components/Pages/PageNotFound';
-import Recover from './Components/Pages/Recover'
-import ResetPassword from './Components/Pages/ResetPassword';
-import Profile from  './Components/Pages/profile'
-import Username from './Components/Pages/Username';
-import ProfileView from './Components/Pages/ProfileView';
+import ResetPassword from './Components/User features/resetPassword';
 import FAQs from './Components/CustomerCare/FAQs';
 import Privacypolicy from './Components/CustomerCare/Privacypolicy';
 import Termsofuse from './Components/CustomerCare/Termsofuse';
@@ -24,67 +18,45 @@ import Bag from './Components/Ecommerce/Bag';
 import LoadingPage from './Components/Loading Page/LoadingPage';
 import ProductPage from './Components/Ecommerce/ProductPage';
 import SearchResults from './Components/Ecommerce/SearchResults';
+import Login from './Components/User features/login.jsx';
+import Register from './Components/User features/Register';
+import store from './Components/Store/store_redux'
+import UpdatePassword from './Components/User features/updatePassword';
+import ProtectedRoute from './ProtectedRoutes'
+import ForgotPassword from './Components/User features/ForgotPassword';
 function App() {
-  // const router=createBrowserRouter([
-  //   {
-  //     path:"/",
-  //     element:<HomePage/>
-  //   },   {
-  //     path:"/login",
-  //     element:<Login/>
-  //   },
-  //   {
-  //     path:"/shop",
-  //     element:<MainContent/>
-  //   },
-  //   {
-  //     path: '/profile',
-  //     element: <Profile/>
-  //   },
-  //   {
-  //     path:"/register",
-  //     element:<Register/>
-  //   },
-  //   {
-  //     path : '/recover',
-  //     element : <Recover/>
-  //   },
-  //   {
-  //     path : '/reset',
-  //     element : <ResetPassword/>
-  //   },
-  //   {
-  //     path:"*",
-  //     element:<PageNotFound/>
-  //   },
-  // ])
+useEffect(()=>{
+  store.dispatch(loadUser())
+},[])
   return (
     <div className="App bg-[#F5F5F5]">
-      {/* <RouterProvider router={router}></RouterProvider> */}
+      {/* <UpdatePassword/> */}
       <BrowserRouter>
-      
         <Routes>
+          <Route path='/loading' element={<LoadingPage/>}/>
           <Route path='/' element={<HomePage/>}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/register' element={<Register/>}/>
-          <Route path='/shop' element={<MainContent/>}/>
-          <Route path='/profile' element={<AuthorizeUser><Profile/></AuthorizeUser>}/>
-          <Route path='/profileView' element={<AuthorizeUser><ProfileView/></AuthorizeUser>} />
-          <Route path='/profileView/wishlist' element={<Wishlist />} />
-          <Route path='/profileView/bag' element={<Bag />} />
-          <Route path='/recover' element={<AuthorizeUser><Recover/></AuthorizeUser>}/>
-          <Route path='/reset' element={<AuthorizeUser><ResetPassword/></AuthorizeUser>}/>
-          <Route path='/username' element={<Username/>}/>
+          
+          {/*all the user login and profile routes */}
+          <Route path='/login' element={<Login/>}/>{/*to add protection  */}
+          <Route path='/register' element={<Register/>}/>{/*to add protection  */}
+          <Route path='/profileview' element={<ProtectedRoute><ProfileView /></ProtectedRoute>}/>
+          <Route path='/profile/update' element={<ProtectedRoute><ProfileUpdate /></ProtectedRoute>}/>
+          <Route path='/password/update' element={<ProtectedRoute><UpdatePassword /></ProtectedRoute>}/>
+          <Route path='/password/forgot' element={<ForgotPassword />}/>
+          <Route path='/password/reset/:token'  element={<ResetPassword />}/>
+
+          <Route path='/ecommerce' element={<Home />}/>
           <Route path='/ecommerce/faqs' element={<FAQs />}/>
           <Route path='/ecommerce/privacypolicy' element={<Privacypolicy />}/>
           <Route path='/ecommerce/termsofuse' element={<Termsofuse />}/>
-          <Route path='/ecommerce' element={<Home />}/>
-          <Route path='/loading' element={<LoadingPage/>}/>
+          <Route path='/profileView/bag' element={<ProtectedRoute><Bag /></ProtectedRoute>} />
+          <Route path='/profileView/wishlist' element={<ProtectedRoute><Wishlist /></ProtectedRoute>}/>
           <Route path='/products'  element={<SearchResults/>}/>
           <Route path='/products/:keyword'  element={<SearchResults/>}/>
           <Route path='/product/:id' element={<ProductPage/>}/>
 
           <Route path='*' element={<PageNotFound/>}/>
+          
         </Routes>
       </BrowserRouter>
     </div>
