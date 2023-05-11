@@ -1,8 +1,8 @@
-import Footer from "./footer";
-import TestimonialBox from "./TestimonialBox"
+import Footer from "../Commoncomponents/footer";
+import TestimonialBox from "../Commoncomponents/TestimonialBox"
 import Testimonials from "../Data/Testimonials.json"
 import Stories from "../Data/Stories.json"
-import StoriesBox from "./StoriesBox";
+import StoriesBox from "../Commoncomponents/StoriesBox";
 import Navbar from "./Navbar";
 const HomePage=()=>{
     return(
