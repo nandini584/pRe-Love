@@ -23,7 +23,6 @@
     "react-icons": "^4.8.0",
     "react-js-pagination": "^3.0.3",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.9.0",
     "react-scripts": "^5.0.1",
     "react-simple-star-rating": "^5.1.7",
     "redux": "^4.2.1",
@@ -59,6 +58,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
+    "react-router-dom": "^6.11.1",
     "tailwindcss": "^3.2.7"
   },
   "description": "The main readme starts from line no-75",

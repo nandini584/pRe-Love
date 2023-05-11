@@ -1,6 +1,11 @@
 import React from 'react'
 import styles from '../styles/general.module.css'
+import {useNavigate} from 'react-router-dom'
 function Display(props) {
+  let navigate= useNavigate()
+  const handleClick=()=>{
+    navigate(`/shop`)
+  }
   return (
     <div className='mt-8 px-8'>
         <h1 className=' text-text_color text-4xl font-bold'>{props.heading}</h1>
@@ -11,7 +16,7 @@ function Display(props) {
         <img src={props.src} alt="" />
         <div className='flex justify-center'>
 
-        <button className={styles.primary_btn}>Add items</button>
+        <button className={styles.primary_btn} onClick={handleClick}>Add items</button>
         </div>
         </div>
     </div>

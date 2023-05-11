@@ -33,13 +33,14 @@ const Home = () => {
         <Searchbar />
         <Hero />
         <Categories/>
-        <Premium />
-        <i className='text-xl font-bold pt-4 text-center flex flex-row justify-center'>“Making Sustainability a  &#160;<span className='line-through'> choice </span> &#160; habit in India.”</i>
-        <div className='flex flex-wrap'>
+        <h1 className=' text-text_color text-4xl font-bold px-14s pb-6'>Trending Collection</h1>
+        <div className='flex flex-row flex-wrap items-center justify-evenly pb-6'>
           {products && products.slice(0,6).map((value,key)=>{
             return(<Items product={value} icon={WishlistIcon}/>)
           })}
         </div>
+        <Premium />
+          <i className='text-xl font-bold pt-4 text-center flex flex-row justify-center'>“Making Sustainability a  &#160;<span className='line-through'> choice </span> &#160; habit in India.”</i>
         <BottomNav />
     </div>
     )

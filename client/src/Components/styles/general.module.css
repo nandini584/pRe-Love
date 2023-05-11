@@ -7,6 +7,14 @@
     font-size: 16px;
     font-weight: bold;
 }
+.primary_btn2{
+    background-color: #A7B99D ;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
 .secondary_btn{
     width: 146px;
     height: 38px;
@@ -15,6 +23,16 @@
     font-size: 16px;
 
     border: white solid 3px;
+
+}
+.secondary_btn2{
+    width: 146px;
+    height: 38px;
+    border-radius: 4px;
+    color: #A7B99D;
+    font-size: 16px;
+
+    border: #A7B99D solid 3px;
 
 }
 .hero_section{

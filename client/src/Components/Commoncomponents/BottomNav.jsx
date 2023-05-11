@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import HomeIcon from '../Images/home.svg'
 import ProfileIcon from '../Images/ProfileIcon.svg'
-import WishlistIcon from '../Images/wishlist.svg'
+import WishlistIcon from '../Images/wishlistwhite.svg'
 import CartIcon from '../Images/cart.svg'
 import FAQsIcon from '../Images/question-circle.svg'
 // import 
